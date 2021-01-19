@@ -13,8 +13,6 @@ class LoginController extends Controller
 
     public function index(Request $request)
     {
-
-
         if (!$request->isMethod('POST')) {
             return view('admin.login');
         }
