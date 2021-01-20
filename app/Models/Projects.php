@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
 
 /**
  * Class Projects
@@ -38,4 +39,19 @@ class Projects extends Model
         'start_date' => 'date',
         'end_date' => 'date'
     ];
+
+    public function getShortTitleAttribute(): string
+    {
+        return Str::limit($this->title, 30, '[...]');
+    }
+
+    public function getShortDescriptionAttribute(): string
+    {
+        return Str::limit($this->description, 30, '[...]');
+    }
+
+    public function getShortDesAttribute(): string
+    {
+        return Str::limit($this->short_description, 30, '[...]');
+    }
 }
