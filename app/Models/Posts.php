@@ -12,6 +12,7 @@ use Illuminate\Support\Str;
  * @package App\Models
  * @property int $id
  * @property string $title
+ * @property string $image_url
  * @property string $description
  * @property int $category_id
  * @property BelongsTo|Category $category
@@ -24,6 +25,7 @@ class Posts extends Model
         'category_id',
         'title',
         'description',
+        'image_url'
     ];
 
     public function getShortDesAttribute(): string
