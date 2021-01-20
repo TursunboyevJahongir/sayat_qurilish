@@ -29,7 +29,11 @@
                     @foreach($categories as $num => $category)
                         <td>{{$num+1}}</td>
 
-                        <td>{{$category->title}}</td>
+                        <td>
+                            <a href="{{route('post.index', ['category' => $category->id])}}">
+                                {{$category->short_title}}
+                            </a>
+                        </td>
                         <td>
                             <div class="btn-group mr-2">
                                 <a href="{{route('post.index', ['category' => $category->id])}}" type="button"
@@ -39,14 +43,8 @@
                                    class="btn btn-outline-warning btn-sm" data-toggle="tooltip"
                                    title="kategoryani taxrirlash"><i class="fa fa-edit"></i>
                                 </a>
-                                <form action="{{ route('category.delete', ['category' => $category->id])}}"
-                                      method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-outline-danger btn-sm" data-toggle="tooltip"
-                                            title="Kategoryani o'chirish"><i class="fa fa-trash"></i>
-                                    </button>
-                                </form>
+                                <x-destroy-button message="Kategoryani o'chirish"
+                                                  :url="route('category.delete', ['category' => $category->id])"/>
                             </div>
                         </td>
                 </tr>

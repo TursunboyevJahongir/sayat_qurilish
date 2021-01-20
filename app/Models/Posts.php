@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 /**
  * Class Posts
  * @package App\Models
- * @property string $id
+ * @property int $id
  * @property string $title
  * @property string $description
  * @property int $category_id
