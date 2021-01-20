@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+require_once "web-routes.php";
 
 Route::get('/', [HomeController::class, 'index']);
 
