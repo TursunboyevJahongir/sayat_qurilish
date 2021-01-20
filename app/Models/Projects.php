@@ -11,6 +11,7 @@ use Illuminate\Support\Carbon;
  * @package App\Models
  * @property int $id
  * @property string $title
+ * @property string $image_url
  * @property string $address
  * @property Carbon $start_date
  * @property Carbon $end_date
@@ -25,6 +26,7 @@ class Projects extends Model
     protected $fillable = [
         'title',
         'address',
+        'image_url',
         'start_date',
         'end_date',
         'short_description',

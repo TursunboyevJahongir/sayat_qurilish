@@ -56,7 +56,7 @@
 <!-- end search-box -->
 <aside class="side-widget">
     <div class="inner">
-        <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="Image"></a> </div>
+        <div class="logo"> <a href="/"><img src="{{asset('logo.png')}}" alt="Image"></a> </div>
         <!-- end logo -->
         <div class="hide-mobile">
             <p>Extremity direction existence as dashwoods do up. Securing <u>marianne led</u> welcomed offended but offering six raptures. </p>
@@ -110,7 +110,7 @@
 <!-- end side-widget -->
 <nav class="navbar">
     <div class="container">
-        <div class="logo"> <a href="index.html" STYLE="color: #fff; font-size: 24px">SAYAT QURILISH</a> </div>
+        <div class="logo"> <a href="/" style="color: #fff;text-decoration: none"><img src="{{asset('logo.png')}}" alt="Image">&nbsp;&nbsp;Sayat Qurilish</a></div>
         <!-- end logo -->
     {{--        <div class="languages">--}}
     {{--            <ul>--}}
@@ -152,6 +152,64 @@
 </nav>
 @yield('content')
 
+
+<section class="footer-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <figure class="logo"> <img src="{{asset('logo.png')}}" alt="Image"> Sayat Qurilish </figure>
+                <h2><b>Yaxshi</b> va <b>chiroyli</b> yashang</h2>
+                <div class="button">ALOQA UCHUN <i class="lni lni-arrow-right"></i></div>
+                <div class="sales-representive">
+                    <figure> <img src="images/author01.jpg" alt="Image"> </figure>
+                    Telefon raqam <b>+99890 111 22 33</b> </div>
+                <!-- end sales-representive -->
+            </div>
+            <!-- end col-12  -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <h6 class="widget-title">BOSH OFIS</h6>
+                <address>
+                    <p>Xorazm viloyati<br>
+                        Xiva tumani, Sayot</p>
+                    <p>+99890 111 22 33</p>
+                </address>
+            </div>
+            <!-- end col-4 -->
+            <div class="col-lg-4 col-md-6">
+                <h6 class="widget-title">Ma'lumot</h6>
+                <address>
+                    <p>Guvohnoma № 325571<br>
+                        </p>
+                </address>
+            </div>
+            <!-- end col-4 -->
+            <div class="col-lg-4">
+                <h6 class="widget-title">Savol bormi?</h6>
+                <p><a href="#" class="btn btn-light">XABAR YUBORISH</a></p>
+            </div>
+            <!-- end col-4 -->
+            <div class="col-12">
+                <div class="footer-bottom"> <span>© 2021 "Sayat Kurilish" MChJ</span>
+                </div>
+                <!-- end footer-bottom -->
+            </div>
+            <!-- end col-12  -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+    <a href="#" class="scroll-top"><i class="lni lni-arrow-up"></i> <small>Yuqoriga</small> </a>
+    <!-- end scroll-top -->
+</footer>
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/swiper.min.js')}}"></script>

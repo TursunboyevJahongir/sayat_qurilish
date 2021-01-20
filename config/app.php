@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        \Froiden\SqlGenerator\SqlGeneratorServiceProvider::class,
         /*
          * Application Service Providers...
          */

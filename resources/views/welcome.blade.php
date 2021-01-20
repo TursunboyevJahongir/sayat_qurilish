@@ -88,39 +88,296 @@
         <!-- end container -->
         <div class="swiper-container project-slider">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <figure class="project-box"> <a href="#"><img src="images/slide02.jpg" alt="Image"></a>
-                        <figcaption>
-                            <h5>Life Science Center</h5>
-                            <p>The building opened in 2020 and includes more than 120+ flats</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- end swiper-slide -->
-                <div class="swiper-slide">
-                    <figure class="project-box"> <a href="#"><img src="images/slide03.jpg" alt="Image"></a>
-                        <figcaption>
-                            <h5>Life Science Center</h5>
-                            <p>The building opened in 2020 and includes more than 120+ flats</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- end swiper-slide -->
-                <div class="swiper-slide">
-                    <figure class="project-box"> <a href="#"><img src="images/slide01.jpg" alt="Image"></a>
-                        <figcaption>
-                            <h5>Life Science Center</h5>
-                            <p>The building opened in 2020 and includes more than 120+ flats</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- end swiper-slide -->
+                @foreach($projects as $project)
+                    <div class="swiper-slide">
+                        <figure class="project-box"> <a href="#"><img src="{{$project->image_url ?? asset('images/slide03.jpg')}}" alt="Image"></a>
+                            <figcaption>
+                                <h5>{{$project->title}}</h5>
+                                <p>{{$project->short_description}}</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                @endforeach
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
         </div>
         <!-- end project-slider -->
     </section>
+    <section class="content-section ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="counter-box"> <span class="odometer odometer-auto-theme" data-count="33" data-status="yes"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span></span></span></span></div></span> <span class="value"> ta</span>
+                        <p><h6>Ishchilar soni</h6></p>
+                    </div>
+                    <!-- end counter-box -->
+                </div>
+                <!-- end col-3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="counter-box"> <span class="odometer odometer-auto-theme" data-count="2005" data-status="yes"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span></div></span> <span class="value">-yil</span>
+                        <p><h6>Firma tashkil topgan</h6></p>
+                    </div>
+                    <!-- end counter-box -->
+                </div>
+                <!-- end col-3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="counter-box"> <span class="odometer odometer-auto-theme" data-count="30" data-status="yes"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">4</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">7</span></span></span></span></span></div></span> <span class="value">ta</span>
+                        <p><h6>Bitkazilgan loyihalar</h6></p>
+                    </div>
+                    <!-- end counter-box -->
+                </div>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
 
+    <section class="content-section no-spacing">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <div class="section-title text-left">
+                        <h6>Katalog</h6>
+                        <h2>Xizmatlar katalogi</h2>
+                    </div>
+                    <!-- end section-title -->
+                </div>
+                <!-- end col-12 -->
+                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Commercial</span> <i class="lni lni-arrow-right"></i> </a> </div>
+                <!-- end col-4 -->
+
+                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Apartments</span> <i class="lni lni-arrow-right"></i> </a> </div>
+                <!-- end col-4 -->
+
+                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Flats</span> <i class="lni lni-arrow-right"></i> </a> </div>
+                <!-- end col-4 -->
+
+                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Villas</span> <i class="lni lni-arrow-right"></i> </a> </div>
+                <!-- end col-4 -->
+
+                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Medical</span> <i class="lni lni-arrow-right"></i> </a> </div>
+                <!-- end col-4 -->
+
+                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Industrial</span> <i class="lni lni-arrow-right"></i> </a> </div>
+                <!-- end col-4 -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h6>Xodimlar</h6>
+                        <h2>Professional xodimlar</h2>
+                    </div>
+                    <!-- end section-title -->
+                </div>
+                <!-- end col-12 -->
+            </div>
+            <!-- end row -->
+            <div class="row no-gutters">
+                <div class="col">
+                    <div class="sales-team">
+                        <figure><img src="images/team01.jpg" alt="Image"></figure>
+                        <div class="infos">
+                            <h6>Jane O'neil</h6>
+                            <small>Chief Financial Offer</small>
+                        </div>
+                        <!-- end infos -->
+                    </div>
+                    <!-- end sales-team -->
+                </div>
+                <!-- end col -->
+                <div class="col">
+                    <div class="sales-team">
+                        <figure><img src="images/team02.jpg" alt="Image"></figure>
+                        <div class="infos">
+                            <h6>Bob Voss</h6>
+                            <small>Chief Financial Offer</small>
+                        </div>
+                        <!-- end infos -->
+                    </div>
+                    <!-- end sales-team -->
+                </div>
+                <!-- end col -->
+                <div class="col">
+                    <div class="sales-team">
+                        <figure><img src="images/team03.jpg" alt="Image"></figure>
+                        <div class="infos">
+                            <h6>Christina Eden</h6>
+                            <small>Chief Financial Offer</small>
+                        </div>
+                        <!-- end infos -->
+                    </div>
+                    <!-- end sales-team -->
+                </div>
+                <!-- end col -->
+                <div class="col">
+                    <div class="sales-team">
+                        <figure><img src="images/team04.jpg" alt="Image"></figure>
+                        <div class="infos">
+                            <h6>Eric Mendes</h6>
+                            <small>Chief Financial Offer</small>
+                        </div>
+                        <!-- end infos -->
+                    </div>
+                    <!-- end sales-team -->
+                </div>
+                <!-- end col -->
+                <div class="col">
+                    <div class="sales-team">
+                        <figure><img src="images/team05.jpg" alt="Image"></figure>
+                        <div class="infos">
+                            <h6>Marie Sheldon</h6>
+                            <small>Chief Financial Offer</small>
+                        </div>
+                        <!-- end infos -->
+                    </div>
+                    <!-- end sales-team -->
+                </div>
+                <!-- end col -->
+                <!-- end col -->
+                <div class="col">
+                    <div class="sales-team">
+                        <figure><img src="images/team05.jpg" alt="Image"></figure>
+                        <div class="infos">
+                            <h6>Marie Sheldon</h6>
+                            <small>Chief Financial Offer</small>
+                        </div>
+                        <!-- end infos -->
+                    </div>
+                    <!-- end sales-team -->
+                </div>
+                <!-- end col -->
+                <!-- end col -->
+                <div class="col">
+                    <div class="sales-team">
+                        <figure><img src="images/team05.jpg" alt="Image"></figure>
+                        <div class="infos">
+                            <h6>Marie Sheldon</h6>
+                            <small>Chief Financial Offer</small>
+                        </div>
+                        <!-- end infos -->
+                    </div>
+                    <!-- end sales-team -->
+                </div>
+                <!-- end col -->
+                <!-- end col -->
+                <div class="col">
+                    <div class="sales-team">
+                        <figure><img src="images/team05.jpg" alt="Image"></figure>
+                        <div class="infos">
+                            <h6>Marie Sheldon</h6>
+                            <small>Chief Financial Offer</small>
+                        </div>
+                        <!-- end infos -->
+                    </div>
+                    <!-- end sales-team -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+
+
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h6>Erishilgan yangilanishlar</h6>
+                        <h2>Oxirgi yangiliklar</h2>
+                    </div>
+                    <!-- end section-title -->
+                </div>
+                <!-- end col-12 -->
+                <div class="col-lg-5">
+                    <div class="recent-news">
+                        <figure> <img src="images/slide01.jpg" alt="Image"> </figure>
+                        <div class="content"> <small>29 February, 2020</small>
+                            <h3><a href="#">Result of a challenge I participated in as a guest on The Futuristic</a></h3>
+                            <!-- end author -->
+                        </div>
+                        <!-- end content -->
+                    </div>
+                    <!-- end recent-news -->
+                </div>
+                <!-- end col-5 -->
+                <div class="col-lg-7">
+                    <div class="row inner">
+                        <div class="col-md-6">
+                            <div class="recent-news">
+                                <figure> <img src="images/slide02.jpg" alt="Image"> </figure>
+                                <div class="content"> <small>29 February, 2020</small>
+                                    <h3><a href="#">Challenge I participated in as a guest on all font</a></h3>
+                                    <!-- end author -->
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end recent-news -->
+                        </div>
+                        <!-- end col-4 -->
+                        <div class="col-md-6">
+                            <div class="recent-news">
+                                <figure> <img src="images/slide03.jpg" alt="Image"> </figure>
+                                <div class="content"> <small>29 February, 2020</small>
+                                    <h3><a href="#">Participated challenge in as a guest on The Future</a></h3>
+                                    <!-- end author -->
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end recent-news -->
+                        </div>
+                        <!-- end col-4 -->
+                    </div>
+                    <!-- end row inner -->
+                </div>
+                <!-- end col-7 -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+
+
+    <div class="content-section" data-background="#f7f6f1" style="background: rgb(247, 246, 241);">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <figure class="logo-item" style="opacity: 1;"> <img src="images/logo01.png" alt="Image"> </figure>
+                </div>
+                <!-- end col-2 -->
+                <div class="col-lg-2 col-md-4 col-6">
+                    <figure class="logo-item" style="opacity: 1;"> <img src="images/logo02.png" alt="Image"> </figure>
+                </div>
+                <!-- end col-2 -->
+                <div class="col-lg-2 col-md-4 col-6">
+                    <figure class="logo-item" style="opacity: 1;"> <img src="images/logo03.png" alt="Image"> </figure>
+                </div>
+                <!-- end col-2 -->
+                <div class="col-lg-2 col-md-4 col-6">
+                    <figure class="logo-item" style="opacity: 1;"> <img src="images/logo04.png" alt="Image"> </figure>
+                </div>
+                <!-- end col-2 -->
+                <div class="col-lg-2 col-md-4 col-6">
+                    <figure class="logo-item" style="opacity: 1;"> <img src="images/logo05.png" alt="Image"> </figure>
+                </div>
+                <!-- end col-2 -->
+                <div class="col-lg-2 col-md-4 col-6">
+                    <figure class="logo-item" style="opacity: 1;"> <img src="images/logo06.png" alt="Image"> </figure>
+                </div>
+                <!-- end col-2 -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
 @endsection
 
