@@ -18,13 +18,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('dash/admin/login', [LoginController::class, 'index'])->name('login');
 Route::post('dash/admin/login', [LoginController::class, 'index'])->name('login');
 
 Route::middleware('auth:web')->prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::post('logout',[LoginController::class, 'logout'])->name('logout');
 
     //category
     Route::get('categories', [CategoryController::class, 'index'])->name('category.index');

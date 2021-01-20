@@ -51,6 +51,7 @@ return [
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'AdminLTE',
+//    'url'  => 'admin/blog',
 
     /*
     |--------------------------------------------------------------------------
@@ -187,12 +188,8 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
-    'logout_url' => 'logout',
-    'login_url' => 'login',
-    'register_url' => 'register',
-    'password_reset_url' => 'password/reset',
-    'password_email_url' => 'password/email',
+    'dashboard_url' => 'admin',
+    'logout_url' => '/admin/logout',
     'profile_url' => false,
 
     /*
@@ -235,10 +232,10 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => '',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
+            'text' => 'Kategoryalar',
+            'url'  => 'admin/categories',
+            'icon' => 'fa fa-align-justify',
+//            'label'       => \App\Models\Category::,
             'label_color' => 'success',
         ],
         ['header' => 'account_settings'],

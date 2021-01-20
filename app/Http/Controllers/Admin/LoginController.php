@@ -7,6 +7,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -32,7 +33,12 @@ class LoginController extends Controller
         return redirect(route('login'))->withErrors([
             'login' => __('auth.failed')
         ]);
+    }
 
+    public function logout() {
+        Session::flush();
+        Auth::logout();
+        return Redirect(route('home'));
     }
 
 }
