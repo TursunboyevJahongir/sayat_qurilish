@@ -32,7 +32,7 @@
                         <td>{{$num+1}}</td>
                         <td>
                             <a href="{{route('post.edit', ['post' => $post->id])}}"
-                                data-toggle="tooltip"
+                               data-toggle="tooltip"
                                title="Elementni tahrirlash">{{$post->short_title}}</i>
                             </a>
                         </td>
@@ -44,14 +44,8 @@
                                    class="btn btn-outline-warning btn-sm" data-toggle="tooltip"
                                    title="Elementni tahrirlash"><i class="fa fa-edit"></i>
                                 </a>
-                                <form action="{{ route('post.delete', ['post' => $post->id])}}"
-                                      method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-outline-danger btn-sm" data-toggle="tooltip"
-                                            title="Elementni o'chirish"><i class="fa fa-trash"></i>
-                                    </button>
-                                </form>
+                                <x-destroy-button message="Elementni o'chirish"
+                                                  :url="route('post.delete', ['post' => $post->id])"/>
                             </div>
                         </td>
                 </tr>
