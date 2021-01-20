@@ -96,7 +96,7 @@
                         </ul>
                     </li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="{{route('project.index')}}">Loyihalar</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -133,7 +133,7 @@
                 </li>
                 <li><a href="services.html">Katalog</a></li>
                 <li><a href="services.html">Xizmatlar</a></li>
-                <li><a href="projects.html">Loyihalar</a></li>
+                <li><a href="{{route('project.index')}}">Loyihalar</a></li>
                 <li><a href="news.html">Yangiliklar</a></li>
             </ul>
         </div>
