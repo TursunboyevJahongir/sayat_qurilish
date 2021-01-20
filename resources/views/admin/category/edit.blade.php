@@ -5,7 +5,7 @@
 @section('title', $title)
 
 @section('content_header')
-    <h1>{{__('post.edit')}}</h1>
+    <h1>{{$title}}</h1>
 @stop
 
 @section('content')

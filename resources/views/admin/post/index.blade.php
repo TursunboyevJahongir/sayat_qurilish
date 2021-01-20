@@ -5,14 +5,15 @@
 @section('title', $title)
 
 @section('content_header')
-    <h1>{{__('post.post')}}</h1>
+    <h1>{{$category->title}}</h1>
 @stop
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">{{__('post.post')}}</h3>
-            <a href="{{route('post.form')}}" type="button" class="btn btn-outline-success float-right btn-sm"
-               data-toggle="tooltip" title="{{__('post.add')}}"> <i class="fa fa-plus"></i></a>
+            <h3 class="card-title">{{$title}}</h3>
+            <a href="{{route('post.form',['category'=>$category->id])}}" type="button"
+               class="btn btn-outline-success float-right btn-sm"
+               data-toggle="tooltip" title="yangi maxsulot"> <i class="fa fa-plus"></i></a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -20,9 +21,8 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>{{__('post.name_en')}}</th>
-                    <th>{{__('post.name_ru')}}</th>
-                    <th>{{__('post.name_uz')}}</th>
+                    <th>Mavzusi</th>
+                    <th>Matni</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -30,25 +30,26 @@
                 <tr>
                     @foreach($posts as $num => $post)
                         <td>{{$num+1}}</td>
-
-                        @foreach($post->title as $name)
-                            <td>{{$name}}</td>
-                        @endforeach
+                        <td>
+                            <a href="{{route('post.edit', ['post' => $post->id])}}"
+                                data-toggle="tooltip"
+                               title="Elementni tahrirlash">{{$post->short_title}}</i>
+                            </a>
+                        </td>
+                        <td>{{$post->short_des}}</td>
                         <td>
                             <div class="btn-group mr-2">
-                                <a href="{{route('district.index', ['post' => $post->id])}}" type="button"
-                                   class="btn btn-outline-secondary btn-sm"><i class="fa fa-eye"></i>
-                                </a>
+
                                 <a href="{{route('post.edit', ['post' => $post->id])}}" type="button"
                                    class="btn btn-outline-warning btn-sm" data-toggle="tooltip"
-                                   title="{{__('post.edit')}}"><i class="fa fa-edit"></i>
+                                   title="Elementni tahrirlash"><i class="fa fa-edit"></i>
                                 </a>
                                 <form action="{{ route('post.delete', ['post' => $post->id])}}"
                                       method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-outline-danger btn-sm" data-toggle="tooltip"
-                                            title="{{__('post.delete')}}"><i class="fa fa-trash"></i>
+                                            title="Elementni o'chirish"><i class="fa fa-trash"></i>
                                     </button>
                                 </form>
                             </div>

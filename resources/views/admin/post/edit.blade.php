@@ -5,41 +5,35 @@
 @section('title', $title)
 
 @section('content_header')
-    <h1>{{__('post.edit')}}</h1>
+    <h1>{{$post->category->short_title}}</h1>
 @stop
 
 @section('content')
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title"></h3>
+            <h3 class="card-title">Elementini tahrirlash</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="{{ route('post.update', ['post' => $region->id])}}" method="post">
+        <form role="form" action="{{ route('post.update', ['post' => $post->id])}}" method="post">
             @csrf
             @method('PUT')
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">The name of the region </label>
-                    <input type="text" class="form-control" name="title[en]" placeholder="in English"
-                           value="{{$region->title['en']}}" required>
+                    <label for="exampleInputEmail1">Mavzusi </label>
+                    <input type="text" class="form-control" name="title" value="{{$post->title}}" placeholder="Mavzu" required>
                 </div>
+                <!-- textarea -->
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Название региона</label>
-                    <input type="text" class="form-control" name="title[ru]" placeholder="на Русском"
-                           value="{{$region->title['ru']}}" required>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Viloyat nomi</label>
-                    <input type="text" class="form-control" name="title[uz]" placeholder="O'zbekchada"
-                           value="{{$region->title['uz']}}" required>
+                    <label>Matni</label>
+                    <textarea class="form-control" rows="3" name ='description' placeholder="Matn ...">{{$post->description}}</textarea>
                 </div>
             </div>
             <!-- /.card-body -->
 
             <div class="card-footer">
-                <button type="submit" class="btn btn-primary">{{__('post.submit')}}</button>
+                <button type="submit" class="btn btn-primary">Yangilash</button>
             </div>
         </form>
     </div>

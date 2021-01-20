@@ -5,37 +5,37 @@
 @section('title', $title)
 
 @section('content_header')
-    <h1>{{__('post.add')}}</h1>
+    <h1>{{$category->short_title}} kategoryaga </h1>
 @stop
 
 @section('content')
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title"></h3>
+            <h3 class="card-title">Element qo'shish</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="{{ route('post.create') }}" method="post">
+        <form role="form" action="{{ route('post.create',['category' => $category->id]) }}" method="post">
             @csrf
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">The name of the district </label>
-                    <input type="text" class="form-control" name="title[en]" placeholder="in English" required>
+                    <label for="exampleInputEmail1">Mavzusi</label>
+                    <input type="text" class="form-control" name="title" placeholder="Mavzu" required>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Название региона</label>
-                    <input type="text" class="form-control" name="title[ru]" placeholder="на Русском" required>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Tuman nomi</label>
-                    <input type="text" class="form-control" name="title[uz]" placeholder="O'zbekchada" required>
-                </div>
+                    <!-- textarea -->
+                    <div class="form-group">
+                        <label>Matni</label>
+                        <textarea class="form-control" rows="3" name ='description' placeholder="Matn ..."></textarea>
+                    </div>
             </div>
             <!-- /.card-body -->
 
             <div class="card-footer">
-                <button type="submit" class="btn btn-primary">{{__('post.submit')}}</button>
+                <button type="submit" class="btn btn-primary">Qo'shish</button>
             </div>
         </form>
     </div>

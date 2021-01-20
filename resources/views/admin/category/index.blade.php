@@ -32,7 +32,7 @@
                         <td>{{$category->title}}</td>
                         <td>
                             <div class="btn-group mr-2">
-                                <a href="{{route('category.index', ['category' => $category->id])}}" type="button"
+                                <a href="{{route('post.index', ['category' => $category->id])}}" type="button"
                                    class="btn btn-outline-secondary btn-sm"><i class="fa fa-eye"></i>
                                 </a>
                                 <a href="{{route('category.edit', ['category' => $category->id])}}" type="button"

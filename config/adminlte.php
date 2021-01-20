@@ -248,9 +248,9 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Kategoryalar',
+            'url'  => 'admin/categories',
+            'icon' => 'fa fa-align-justify',
         ],
         [
             'text'    => 'Katalog',

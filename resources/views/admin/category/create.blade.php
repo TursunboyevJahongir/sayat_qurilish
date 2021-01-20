@@ -27,7 +27,15 @@
                     <div class="alert alert-danger">
                         <ul>
                             @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
+                                @if($error == "The title has already been taken.")
+                                    <div class="alert alert-danger" role="alert">
+                                        Bunday nomdagi Kategorya mavjud
+                                    </div>
+                                @else
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $error }}
+                                    </div>
+                                @endif
                             @endforeach
                         </ul>
                     </div>
