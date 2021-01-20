@@ -7,7 +7,8 @@
     <title>Sayat Qurilish | Sanoat qurilish kompaniyasi</title>
     <meta name="author" content="Javlonbek Sharipov">
     <meta name="description" content="For all kind of construction company website">
-    <meta name="keywords" content="consto, business, construction, company, industrial, building, projects, corporate, apartments, flat, condo, brick, website, design, animation, transition, themezinho">
+    <meta name="keywords"
+          content="consto, business, construction, company, industrial, building, projects, corporate, apartments, flat, condo, brick, website, design, animation, transition, themezinho">
 
     <!-- SOCIAL MEDIA META -->
     <meta property="og:description" content="Consto | Industrial Construction Company">
@@ -56,11 +57,13 @@
 <!-- end search-box -->
 <aside class="side-widget">
     <div class="inner">
-        <div class="logo"> <a href="/"><img src="{{asset('logo.png')}}" alt="Image"></a> </div>
+        <div class="logo"><a href="/"><img src="{{asset('logo.png')}}" alt="Image"></a></div>
         <!-- end logo -->
         <div class="hide-mobile">
-            <p>Extremity direction existence as dashwoods do up. Securing <u>marianne led</u> welcomed offended but offering six raptures. </p>
-            <figure class="gallery"><img src="images/slide02.jpg" alt="Image"><img src="images/slide03.jpg" alt="Image"></figure>
+            <p>Extremity direction existence as dashwoods do up. Securing <u>marianne led</u> welcomed offended but
+                offering six raptures. </p>
+            <figure class="gallery"><img src="images/slide02.jpg" alt="Image"><img src="images/slide03.jpg" alt="Image">
+            </figure>
             <h6 class="widget-title">ADDRESS</h6>
             <address class="address">
                 <p>228 Cardigan Road, Leeds<br>
@@ -104,50 +107,35 @@
             <!-- end site-menu -->
         </div>
         <!-- end show-mobile -->
-        <small>© 2020 Consto | Industrial Construction Company</small> </div>
+        <small>© 2020 Consto | Industrial Construction Company</small></div>
     <!-- end inner -->
 </aside>
 <!-- end side-widget -->
 <nav class="navbar">
     <div class="container">
-        <div class="logo"> <a href="/" style="color: #fff;text-decoration: none"><img src="{{asset('logo.png')}}" alt="Image">&nbsp;&nbsp;Sayat Qurilish</a></div>
-        <!-- end logo -->
-    {{--        <div class="languages">--}}
-    {{--            <ul>--}}
-    {{--                <li><a href="#">en</a></li>--}}
-    {{--                <li><a href="#">ru</a></li>--}}
-    {{--            </ul>--}}
-    {{--        </div>--}}
-    <!-- end languages -->
+        <div class="logo"><a href="/" style="color: #fff;text-decoration: none"><img src="{{asset('logo.png')}}"
+                                                                                     alt="Image">&nbsp;&nbsp;Sayat
+                Qurilish</a></div>
         <div class="site-menu">
             <ul>
-                <li><a href="#">Sayat Qurilish</a>
-                    <ul>
-                        <li><a href="about-company.html">Kompaniya haqida</a></li>
-                        <li><a href="core-values.html">Core Values</a></li>
-                        <li><a href="leadership.html">Leadership</a></li>
-                        <li><a href="our-history.html">Our History</a></li>
-                        <li><a href="offices.html">Offices</a></li>
-                        <li><a href="certificates.html">Certificates</a></li>
-                    </ul>
-                </li>
-                <li><a href="services.html">Katalog</a></li>
-                <li><a href="services.html">Xizmatlar</a></li>
+                <li><a href="#">Kompaniya haqida</a></li>
+                <li><a href="{{route('catalog.index')}}">Katalog</a></li>
                 <li><a href="{{route('project.index')}}">Loyihalar</a></li>
                 <li><a href="news.html">Yangiliklar</a></li>
             </ul>
         </div>
         <!-- end site-menu -->
-        <div class="search"> <i class="lni lni-search-alt"></i> </div>
+        <div class="search"><i class="lni lni-search-alt"></i></div>
         <!-- end search -->
 
         <div class="hamburger">
-            <div id="hamburger"> <span></span> <span></span> <span></span> </div>
-            <div id="cross"> <span></span> <span></span> </div>
+            <div id="hamburger"><span></span> <span></span> <span></span></div>
+            <div id="cross"><span></span> <span></span></div>
         </div>
         <!-- end hamburger -->
         <!-- end hamburher -->
-        <a href="#sales-specialist-form" class="navbar-button" data-fancybox><i class="lni lni-mobile"></i> <span>BIZ BILAN BOG'LANING</span></a> </div>
+        <a href="#sales-specialist-form" class="navbar-button" data-fancybox><i class="lni lni-mobile"></i> <span>BIZ BILAN BOG'LANING</span></a>
+    </div>
     <!-- end container -->
 </nav>
 @yield('content')
@@ -157,12 +145,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <figure class="logo"> <img src="{{asset('logo.png')}}" alt="Image"> Sayat Qurilish </figure>
+                <figure class="logo"><img src="{{asset('logo.png')}}" alt="Image"> Sayat Qurilish</figure>
                 <h2><b>Yaxshi</b> va <b>chiroyli</b> yashang</h2>
                 <div class="button">ALOQA UCHUN <i class="lni lni-arrow-right"></i></div>
                 <div class="sales-representive">
-                    <figure> <img src="images/author01.jpg" alt="Image"> </figure>
-                    Telefon raqam <b>+99890 111 22 33</b> </div>
+                    <figure><img src="images/author01.jpg" alt="Image"></figure>
+                    Telefon raqam <b>+99890 111 22 33</b></div>
                 <!-- end sales-representive -->
             </div>
             <!-- end col-12  -->
@@ -188,7 +176,7 @@
                 <h6 class="widget-title">Ma'lumot</h6>
                 <address>
                     <p>Guvohnoma № 325571<br>
-                        </p>
+                    </p>
                 </address>
             </div>
             <!-- end col-4 -->
@@ -198,7 +186,7 @@
             </div>
             <!-- end col-4 -->
             <div class="col-12">
-                <div class="footer-bottom"> <span>© 2021 "Sayat Kurilish" MChJ</span>
+                <div class="footer-bottom"><span>© 2021 "Sayat Kurilish" MChJ</span>
                 </div>
                 <!-- end footer-bottom -->
             </div>
