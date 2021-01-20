@@ -90,9 +90,9 @@
             <div class="swiper-wrapper">
                 @foreach($projects as $project)
                     <div class="swiper-slide">
-                        <figure class="project-box"> <a href="#"><img src="{{$project->image_url ?? asset('images/slide03.jpg')}}" alt="Image"></a>
+                        <figure class="project-box"> <a href="{{route('project.view', ['id' => $project->id])}}"><img src="{{$project->image_url ?? asset('images/slide03.jpg')}}" alt="Image"></a>
                             <figcaption>
-                                <h5>{{$project->title}}</h5>
+                                <a href="{{route('project.view', ['id' => $project->id])}}"><h5>{{$project->title}}</h5></a>
                                 <p>{{$project->short_description}}</p>
                             </figcaption>
                         </figure>
