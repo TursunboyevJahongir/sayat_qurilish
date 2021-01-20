@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,4 +41,12 @@ Route::middleware('auth:web')->prefix('admin')->group(function () {
     Route::get('post/{post}', [PostController::class, 'edit'])->name('post.edit');
     Route::put('post/{post}', [PostController::class, 'update'])->name('post.update');
     Route::delete('post/{post}', [PostController::class, 'destroy'])->name('post.delete');
+
+    //Projects
+    Route::get('projects', [ProjectController::class, 'index'])->name('project.index');
+    Route::get('project/create', [ProjectController::class, 'form'])->name('project.form');
+    Route::post('project/create', [ProjectController::class, 'create'])->name('project.create');
+    Route::get('project/edit/{project}', [ProjectController::class, 'edit'])->name('project.edit');
+    Route::put('project/update/{project}', [ProjectController::class, 'update'])->name('project.update');
+    Route::delete('project/delete/{project}', [ProjectController::class, 'destroy'])->name('project.delete');
 });
