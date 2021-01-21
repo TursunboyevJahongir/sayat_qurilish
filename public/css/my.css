@@ -11,15 +11,15 @@
 
 .cardShadow {
     /* text-align: center; */
-    transition: box-shadow .3s ease-in;
-    transition: .3s ease-in;
+    transition: box-shadow 0.3s ease-in;
+    /*transition: .3s ease-in;*/
     border-radius: 0%;
 }
 
 .cardShadow:hover {
-    border: 0.3px solid gray;
+    /*border: 0.3px solid gray;*/
     border-radius: 1%;
-    transition: .1s ease-in;
+    transition: .3s ease-in;
     box-shadow: 3px 8px 20px gray;
 }
 

@@ -16,7 +16,7 @@ class EmployerController extends Controller
     public function index(Request $request)
     {
         $title = 'Xodimlar';
-        $employers = Employer::all();
+        $employers = Employer::paginate(10);
         return view('admin.employer.index', compact('employers', 'title'));
     }
 

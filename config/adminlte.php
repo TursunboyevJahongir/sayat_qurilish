@@ -222,7 +222,7 @@ return [
     'menu' => [
         [
             'text' => 'Qidirish',
-            'search' => true,
+            'search' => false,
             'topnav' => true,
         ],
         [
@@ -230,6 +230,14 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+        [
+            'text' => 'Dashboard',
+            'url'  => 'admin',
+            'icon' => 'fas fa-home',
+//            'label'       => \App\Models\Category::,
+            'label_color' => 'success',
+        ],
+        ['header' => ''],
         [
             'text' => 'Kategoryalar',
             'url'  => 'admin/categories',
@@ -268,51 +276,7 @@ return [
             'icon' => 'fas fa-envelope',
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'Kategoryalar',
-            'url'  => 'admin/categories',
-            'icon' => 'fa fa-align-justify',
-        ],
-        [
-            'text'    => 'Katalog',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'Kategoryalar',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Element',
-                    'url'     => '/admin/posts'
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+
     ],
 
     /*

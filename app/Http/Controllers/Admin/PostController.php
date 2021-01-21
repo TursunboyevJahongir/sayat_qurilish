@@ -15,7 +15,7 @@ class PostController extends Controller
     public function index(Request $request, Category $category)
     {
         $title = 'Elementlar';
-        $posts = Posts::where('category_id',$category->id)->get();
+        $posts = Posts::where('category_id',$category->id)->paginate(10);
         return view('admin.post.index', compact('posts', 'category', 'title'));
     }
 

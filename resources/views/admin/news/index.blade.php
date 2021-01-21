@@ -51,6 +51,9 @@
                 @endforeach
                 </tbody>
             </table>
+            <div class="d-flex justify-content-center" id="myformid">
+                {!! $news->appends($_GET)->links() !!}
+            </div>
         </div>
         <!-- /.card-body -->
     </div>

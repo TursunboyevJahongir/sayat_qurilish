@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EmployerController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ProjectController;
@@ -78,4 +79,11 @@ Route::middleware('auth:web')->prefix('admin')->group(function () {
     Route::get('slide/edit/{slide}', [SlideController::class, 'edit'])->name('admin.slide.edit');
     Route::put('slide/update/{slide}', [SlideController::class, 'update'])->name('admin.slide.update');
     Route::delete('slide/delete/{slide}', [SlideController::class, 'destroy'])->name('admin.slide.delete');
+
+    //Messages
+    Route::get('messages', [MessageController::class, 'index'])->name('admin.message.index');
+    Route::get('message/{message}', [MessageController::class, 'show'])->name('admin.message.show');
+
+    Route::delete('message/delete/{message}', [MessageController::class, 'destroy'])->name('admin.message.delete');
+
 });
