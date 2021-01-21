@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id
  * @property string $title
  * @property string $content
+ * @property string $image_url
  */
 class News extends Model
 {
@@ -19,5 +20,6 @@ class News extends Model
     protected $fillable = [
         'title',
         'content',
+        'image_url',
     ];
 }
