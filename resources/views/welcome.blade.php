@@ -7,9 +7,9 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="inner">
-                            <h2>Orzularingizni  <b>ro'yobga</b> chiqaring</h2>
+                            <h2>Orzularingizni <b>ro'yobga</b> chiqaring</h2>
                             <p>Biz oilalar qulay yashashi uchun mo'ljallangan binolarni qurmoqdamiz</p>
-                            <a href="#">BARCHASINI KO'RISH <i class="lni lni-arrow-right"></i></a> </div>
+                            <a href="#">BARCHASINI KO'RISH <i class="lni lni-arrow-right"></i></a></div>
                         <!-- end inner -->
                     </div>
                     <!-- end swiper-slide -->
@@ -17,7 +17,7 @@
                         <div class="inner">
                             <h2>All <b>Smart</b> Apartments</h2>
                             <p>We building ambientic living spaces for families</p>
-                            <a href="#">SEE ALL CATALOGUE <i class="lni lni-arrow-right"></i></a> </div>
+                            <a href="#">SEE ALL CATALOGUE <i class="lni lni-arrow-right"></i></a></div>
                         <!-- end inner -->
                     </div>
                     <!-- end swiper-slide -->
@@ -25,7 +25,7 @@
                         <div class="inner">
                             <h2>Mock <b>Living</b> Environment</h2>
                             <p>We building ambientic living spaces for families</p>
-                            <a href="#">DISCOVER CONSTO <i class="lni lni-arrow-right"></i></a> </div>
+                            <a href="#">DISCOVER CONSTO <i class="lni lni-arrow-right"></i></a></div>
                         <!-- end inner -->
                     </div>
                     <!-- end swiper-slide -->
@@ -59,7 +59,7 @@
                     <!-- end swiper-slide -->
                 </div>
                 <!-- end swiper-wrapper -->
-                <div class="header-box"> <b>27</b> <small>YILLIK TAJRIBA</small> </div>
+                <div class="header-box"><b>27</b> <small>YILLIK TAJRIBA</small></div>
                 <!-- end header-box -->
             </div>
             <!-- end slider-main -->
@@ -79,7 +79,9 @@
                 </div>
                 <!-- end col-7 -->
                 <div class="col-lg-5">
-                    <p>Bizning turli xil portfelimiz sifatli, mijozlarga xizmat ko'rsatish sohasidagi ajoyib texnologiyalarga bo'lgan ishtiyoq bilan ta'minlangan o'nlab yillik qurilish tajribasini aks ettiradi.</p>
+                    <p>Bizning turli xil portfelimiz sifatli, mijozlarga xizmat ko'rsatish sohasidagi ajoyib
+                        texnologiyalarga bo'lgan ishtiyoq bilan ta'minlangan o'nlab yillik qurilish tajribasini aks
+                        ettiradi.</p>
                 </div>
                 <!-- end col-5 -->
             </div>
@@ -90,9 +92,11 @@
             <div class="swiper-wrapper">
                 @foreach($projects as $project)
                     <div class="swiper-slide">
-                        <figure class="project-box"> <a href="{{route('project.view', ['id' => $project->id])}}"><img src="{{$project->image_url ?? asset('images/slide03.jpg')}}" alt="Image"></a>
+                        <figure class="project-box"><a href="{{route('project.view', ['id' => $project->id])}}"><img
+                                    src="{{$project->image_url ?? asset('images/slide03.jpg')}}" alt="Image"></a>
                             <figcaption>
-                                <a href="{{route('project.view', ['id' => $project->id])}}"><h5>{{$project->title}}</h5></a>
+                                <a href="{{route('project.view', ['id' => $project->id])}}"><h5>{{$project->title}}</h5>
+                                </a>
                                 <p>{{$project->short_description}}</p>
                             </figcaption>
                         </figure>
@@ -108,21 +112,63 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <div class="counter-box"> <span class="odometer odometer-auto-theme" data-count="33" data-status="yes"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span></span></span></span></div></span> <span class="value"> ta</span>
+                    <div class="counter-box"><span class="odometer odometer-auto-theme" data-count="33"
+                                                   data-status="yes"><div class="odometer-inside"><span
+                                    class="odometer-digit"><span class="odometer-digit-spacer">8</span><span
+                                        class="odometer-digit-inner"><span class="odometer-ribbon"><span
+                                                class="odometer-ribbon-inner"><span
+                                                    class="odometer-value">3</span></span></span></span></span><span
+                                    class="odometer-digit"><span class="odometer-digit-spacer">8</span><span
+                                        class="odometer-digit-inner"><span class="odometer-ribbon"><span
+                                                class="odometer-ribbon-inner"><span
+                                                    class="odometer-value">3</span></span></span></span></span></div></span>
+                        <span class="value"> ta</span>
                         <p><h6>Ishchilar soni</h6></p>
                     </div>
                     <!-- end counter-box -->
                 </div>
                 <!-- end col-3 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="counter-box"> <span class="odometer odometer-auto-theme" data-count="2005" data-status="yes"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span></div></span> <span class="value">-yil</span>
+                    <div class="counter-box"><span class="odometer odometer-auto-theme" data-count="2005"
+                                                   data-status="yes"><div class="odometer-inside"><span
+                                    class="odometer-digit"><span class="odometer-digit-spacer">8</span><span
+                                        class="odometer-digit-inner"><span class="odometer-ribbon"><span
+                                                class="odometer-ribbon-inner"><span
+                                                    class="odometer-value">2</span></span></span></span></span><span
+                                    class="odometer-formatting-mark">,</span><span class="odometer-digit"><span
+                                        class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span
+                                            class="odometer-ribbon"><span class="odometer-ribbon-inner"><span
+                                                    class="odometer-value">0</span></span></span></span></span><span
+                                    class="odometer-digit"><span class="odometer-digit-spacer">8</span><span
+                                        class="odometer-digit-inner"><span class="odometer-ribbon"><span
+                                                class="odometer-ribbon-inner"><span
+                                                    class="odometer-value">2</span></span></span></span></span><span
+                                    class="odometer-digit"><span class="odometer-digit-spacer">8</span><span
+                                        class="odometer-digit-inner"><span class="odometer-ribbon"><span
+                                                class="odometer-ribbon-inner"><span
+                                                    class="odometer-value">1</span></span></span></span></span></div></span>
+                        <span class="value">-yil</span>
                         <p><h6>Firma tashkil topgan</h6></p>
                     </div>
                     <!-- end counter-box -->
                 </div>
                 <!-- end col-3 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="counter-box"> <span class="odometer odometer-auto-theme" data-count="30" data-status="yes"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">4</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">7</span></span></span></span></span></div></span> <span class="value">ta</span>
+                    <div class="counter-box"><span class="odometer odometer-auto-theme" data-count="30"
+                                                   data-status="yes"><div class="odometer-inside"><span
+                                    class="odometer-digit"><span class="odometer-digit-spacer">8</span><span
+                                        class="odometer-digit-inner"><span class="odometer-ribbon"><span
+                                                class="odometer-ribbon-inner"><span
+                                                    class="odometer-value">2</span></span></span></span></span><span
+                                    class="odometer-digit"><span class="odometer-digit-spacer">8</span><span
+                                        class="odometer-digit-inner"><span class="odometer-ribbon"><span
+                                                class="odometer-ribbon-inner"><span
+                                                    class="odometer-value">4</span></span></span></span></span><span
+                                    class="odometer-digit"><span class="odometer-digit-spacer">8</span><span
+                                        class="odometer-digit-inner"><span class="odometer-ribbon"><span
+                                                class="odometer-ribbon-inner"><span
+                                                    class="odometer-value">7</span></span></span></span></span></div></span>
+                        <span class="value">ta</span>
                         <p><h6>Bitkazilgan loyihalar</h6></p>
                     </div>
                     <!-- end counter-box -->
@@ -144,23 +190,11 @@
                     <!-- end section-title -->
                 </div>
                 <!-- end col-12 -->
-                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Commercial</span> <i class="lni lni-arrow-right"></i> </a> </div>
-                <!-- end col-4 -->
-
-                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Apartments</span> <i class="lni lni-arrow-right"></i> </a> </div>
-                <!-- end col-4 -->
-
-                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Flats</span> <i class="lni lni-arrow-right"></i> </a> </div>
-                <!-- end col-4 -->
-
-                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Villas</span> <i class="lni lni-arrow-right"></i> </a> </div>
-                <!-- end col-4 -->
-
-                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Medical</span> <i class="lni lni-arrow-right"></i> </a> </div>
-                <!-- end col-4 -->
-
-                <div class="col-lg-4 col-md-6"> <a href="#" class="sector-box"> <span>Industrial</span> <i class="lni lni-arrow-right"></i> </a> </div>
-                <!-- end col-4 -->
+                @foreach($categories as $category)
+                    <div class="col-lg-4 col-md-6"><a href="{{route('catalog.category', ['id' => $category->id])}}"
+                                                      class="sector-box"> <span>{{$category->title}}</span> <i
+                                class="lni lni-arrow-right"></i> </a></div>
+                @endforeach
             </div>
             <!-- end row -->
         </div>
@@ -173,7 +207,7 @@
                 <div class="col-12">
                     <div class="section-title">
                         <h6>Xodimlar</h6>
-                        <h2>Professional xodimlar</h2>
+                        <h2>Boshqaruvchi xodimlar</h2>
                     </div>
                     <!-- end section-title -->
                 </div>
@@ -181,105 +215,24 @@
             </div>
             <!-- end row -->
             <div class="row no-gutters">
-                <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team01.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Jane O'neil</h6>
-                            <small>Chief Financial Offer</small>
+                <?php
+                /**
+                 * @var \App\Models\Employer[] $workers
+                 */
+                ?>
+                @foreach($workers as $worker)
+                    <div class="col">
+                        <div class="sales-team">
+                            <figure><img src="/uploads/{{$worker->image_url}}" alt="Image"></figure>
+                            <div class="infos">
+                                <h6>{{$worker->full_name}}</h6>
+                                <small>{{$worker->role}}</small>
+                            </div>
+                            <!-- end infos -->
                         </div>
-                        <!-- end infos -->
+                        <!-- end sales-team -->
                     </div>
-                    <!-- end sales-team -->
-                </div>
-                <!-- end col -->
-                <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team02.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Bob Voss</h6>
-                            <small>Chief Financial Offer</small>
-                        </div>
-                        <!-- end infos -->
-                    </div>
-                    <!-- end sales-team -->
-                </div>
-                <!-- end col -->
-                <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team03.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Christina Eden</h6>
-                            <small>Chief Financial Offer</small>
-                        </div>
-                        <!-- end infos -->
-                    </div>
-                    <!-- end sales-team -->
-                </div>
-                <!-- end col -->
-                <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team04.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Eric Mendes</h6>
-                            <small>Chief Financial Offer</small>
-                        </div>
-                        <!-- end infos -->
-                    </div>
-                    <!-- end sales-team -->
-                </div>
-                <!-- end col -->
-                <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team05.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Marie Sheldon</h6>
-                            <small>Chief Financial Offer</small>
-                        </div>
-                        <!-- end infos -->
-                    </div>
-                    <!-- end sales-team -->
-                </div>
-                <!-- end col -->
-                <!-- end col -->
-                <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team05.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Marie Sheldon</h6>
-                            <small>Chief Financial Offer</small>
-                        </div>
-                        <!-- end infos -->
-                    </div>
-                    <!-- end sales-team -->
-                </div>
-                <!-- end col -->
-                <!-- end col -->
-                <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team05.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Marie Sheldon</h6>
-                            <small>Chief Financial Offer</small>
-                        </div>
-                        <!-- end infos -->
-                    </div>
-                    <!-- end sales-team -->
-                </div>
-                <!-- end col -->
-                <!-- end col -->
-                <div class="col">
-                    <div class="sales-team">
-                        <figure><img src="images/team05.jpg" alt="Image"></figure>
-                        <div class="infos">
-                            <h6>Marie Sheldon</h6>
-                            <small>Chief Financial Offer</small>
-                        </div>
-                        <!-- end infos -->
-                    </div>
-                    <!-- end sales-team -->
-                </div>
-                <!-- end col -->
+                @endforeach
             </div>
             <!-- end row -->
         </div>
@@ -300,9 +253,10 @@
                 <!-- end col-12 -->
                 <div class="col-lg-5">
                     <div class="recent-news">
-                        <figure> <img src="images/slide01.jpg" alt="Image"> </figure>
-                        <div class="content"> <small>29 February, 2020</small>
-                            <h3><a href="#">Result of a challenge I participated in as a guest on The Futuristic</a></h3>
+                        <figure><img src="images/slide01.jpg" alt="Image"></figure>
+                        <div class="content"><small>29 February, 2020</small>
+                            <h3><a href="#">Result of a challenge I participated in as a guest on The Futuristic</a>
+                            </h3>
                             <!-- end author -->
                         </div>
                         <!-- end content -->
@@ -314,8 +268,8 @@
                     <div class="row inner">
                         <div class="col-md-6">
                             <div class="recent-news">
-                                <figure> <img src="images/slide02.jpg" alt="Image"> </figure>
-                                <div class="content"> <small>29 February, 2020</small>
+                                <figure><img src="images/slide02.jpg" alt="Image"></figure>
+                                <div class="content"><small>29 February, 2020</small>
                                     <h3><a href="#">Challenge I participated in as a guest on all font</a></h3>
                                     <!-- end author -->
                                 </div>
@@ -326,8 +280,8 @@
                         <!-- end col-4 -->
                         <div class="col-md-6">
                             <div class="recent-news">
-                                <figure> <img src="images/slide03.jpg" alt="Image"> </figure>
-                                <div class="content"> <small>29 February, 2020</small>
+                                <figure><img src="images/slide03.jpg" alt="Image"></figure>
+                                <div class="content"><small>29 February, 2020</small>
                                     <h3><a href="#">Participated challenge in as a guest on The Future</a></h3>
                                     <!-- end author -->
                                 </div>
@@ -351,27 +305,27 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-lg-2 col-md-4 col-6">
-                    <figure class="logo-item" style="opacity: 1;"> <img src="images/logo01.png" alt="Image"> </figure>
+                    <figure class="logo-item" style="opacity: 1;"><img src="images/logo01.png" alt="Image"></figure>
                 </div>
                 <!-- end col-2 -->
                 <div class="col-lg-2 col-md-4 col-6">
-                    <figure class="logo-item" style="opacity: 1;"> <img src="images/logo02.png" alt="Image"> </figure>
+                    <figure class="logo-item" style="opacity: 1;"><img src="images/logo02.png" alt="Image"></figure>
                 </div>
                 <!-- end col-2 -->
                 <div class="col-lg-2 col-md-4 col-6">
-                    <figure class="logo-item" style="opacity: 1;"> <img src="images/logo03.png" alt="Image"> </figure>
+                    <figure class="logo-item" style="opacity: 1;"><img src="images/logo03.png" alt="Image"></figure>
                 </div>
                 <!-- end col-2 -->
                 <div class="col-lg-2 col-md-4 col-6">
-                    <figure class="logo-item" style="opacity: 1;"> <img src="images/logo04.png" alt="Image"> </figure>
+                    <figure class="logo-item" style="opacity: 1;"><img src="images/logo04.png" alt="Image"></figure>
                 </div>
                 <!-- end col-2 -->
                 <div class="col-lg-2 col-md-4 col-6">
-                    <figure class="logo-item" style="opacity: 1;"> <img src="images/logo05.png" alt="Image"> </figure>
+                    <figure class="logo-item" style="opacity: 1;"><img src="images/logo05.png" alt="Image"></figure>
                 </div>
                 <!-- end col-2 -->
                 <div class="col-lg-2 col-md-4 col-6">
-                    <figure class="logo-item" style="opacity: 1;"> <img src="images/logo06.png" alt="Image"> </figure>
+                    <figure class="logo-item" style="opacity: 1;"><img src="images/logo06.png" alt="Image"></figure>
                 </div>
                 <!-- end col-2 -->
             </div>
