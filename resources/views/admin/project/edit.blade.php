@@ -69,8 +69,7 @@
 
                 <label>Boshlanish sanasi</label>
                 <input type="date" name="start_date" class="form-control"
-                       value="{{date('Y-m-d', strtotime($project->start_date))}}" data-target="#reservationdate"
-                       required>
+                       value="{{date('Y-m-d', strtotime($project->start_date))}}" data-target="#reservationdate">
 
                 <label>Tugallanish sanisi</label>
                 <input type="date" name="end_date" class="form-control"
@@ -78,8 +77,7 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Manzil </label>
                     <input type="text" class="form-control" value="{{$project->address}}" name="address"
-                           placeholder="Manzili..."
-                           required>
+                           placeholder="Manzili...">
                 </div>
                 <br>
                 <div class="form-group">

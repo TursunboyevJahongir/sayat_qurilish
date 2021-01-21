@@ -12,7 +12,7 @@
         <div class="card-header">
             <h3 class="card-title">{{$title}}</h3>
             <a href="{{route('admin.post.form',['category'=>$category->id])}}" type="button"
-               class="btn btn-outline-success float-right btn-sm"
+               class="btn btn-outline-success float-right btn-lg"
                data-toggle="tooltip" title="yangi maxsulot"> <i class="fa fa-plus"></i></a>
         </div>
         <!-- /.card-header -->
@@ -51,7 +51,7 @@
                             <div class="btn-group mr-2">
 
                                 <a href="{{route('admin.post.edit', ['post' => $post->id])}}" type="button"
-                                   class="btn btn-outline-warning btn-sm" data-toggle="tooltip"
+                                   class="btn btn-outline-warning btn-lg" data-toggle="tooltip"
                                    title="Elementni tahrirlash"><i class="fa fa-edit"></i>
                                 </a>
                                 <x-destroy-button message="Elementni o'chirish"

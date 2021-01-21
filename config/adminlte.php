@@ -243,6 +243,12 @@ return [
             'icon' => 'fa fa-circle',
             'label_color' => 'success',
         ],
+        [
+            'text' => 'Xodimlar',
+            'url'  => 'admin/employers',
+            'icon' => 'fa fa-circle',
+            'label_color' => 'success',
+        ],
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
