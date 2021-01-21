@@ -5,20 +5,21 @@
 @section('title', $title)
 
 @section('content_header')
-    <h1>{{$category->short_title}} kategoryaga </h1>
+    <h1>{{$title}}</h1>
 @stop
 
 @section('content')
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Element qo'shish</h3>
+            <h3 class="card-title">Xodim haqqidagi malumotlarni tahrirlash</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="{{ route('admin.post.create',['category' => $category->id]) }}" method="post"
+        <form role="form" action="{{ route('admin.news.update', ['news' => $news->id])}}" method="post"
               enctype="multipart/form-data">
             @csrf
+            @method('PUT')
             @if (count($errors) > 0)
                 <div class="alert alert-danger">
                     <ul>
@@ -31,31 +32,16 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Mavzusi</label>
-                    <input type="text" class="form-control" name="title" placeholder="Mavzu" required>
+                    <input type="text" class="form-control" name="title" value="{{$news->title}}" placeholder="Mavzu" required>
                 </div>
                 <!-- textarea -->
                 <div class="form-group">
                     <label>Matni</label>
-                    <textarea class="form-control" rows="3" name='description' placeholder="Matn ..." required></textarea>
+                    <textarea class="form-control" rows="3" name='content' placeholder="Matn ..." required>value={{$news->contenet}}</textarea>
                 </div>
             </div>
-
-            <div class="card-body">
-                <div class="form-group">
-                    <label for="exampleInputFile">Rasmi</label>
-                    <div class="input-group">
-                        <div class="custom-file">
-                            <input type="file" accept="image/*" class="custom-file-input" name="image_url"
-                                   id="exampleInputFile" required>
-                            <label class="custom-file-label" for="exampleInputFile">Rasmni tanlang</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /.card-body -->
-
             <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Qo'shish</button>
+                <button type="submit" class="btn btn-primary">Yangilash</button>
             </div>
         </form>
     </div>

@@ -16,7 +16,8 @@
         "intervention/image": "^2.5",
         "jeroennoten/laravel-adminlte": "^3.5",
         "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+      "ext-http": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

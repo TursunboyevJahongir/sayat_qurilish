@@ -39,13 +39,13 @@
                 <div class="form-group">
                     <label>Qisqacha Matni</label>
                     <textarea class="form-control" rows="3" name='short_description'
-                              placeholder="Qisqacha ...">{{$project->short_description}}</textarea>
+                              placeholder="Qisqacha ..." required>{{$project->short_description}}</textarea>
                 </div>
 
                 <div class="form-group">
                     <label>Matni</label>
                     <textarea class="form-control" rows="3" name='description'
-                              placeholder="Matn ...">{{$project->description}}</textarea>
+                              placeholder="Matn ..." required>{{$project->description}}</textarea>
                 </div>
 
 
