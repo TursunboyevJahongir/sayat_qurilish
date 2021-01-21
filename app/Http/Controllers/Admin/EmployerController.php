@@ -32,7 +32,7 @@ class EmployerController extends Controller
         $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
         $request->image_url->storeAs('', $filename);
         $employer['image_url'] = $filename;
-        Image::make('uploads/' . $employer['image_url'])->resize(1700, 1500)->save();
+        Image::make('uploads/' . $employer['image_url'])->fit(480, 640)->save();
         Employer::create($employer);
         return redirect(route('admin.employer.index'));
     }
@@ -50,7 +50,7 @@ class EmployerController extends Controller
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $employer->image_url = $filename;
-            Image::make('uploads/' . $employer->image_url)->resize(1700, 1500)->save();
+            Image::make('uploads/' . $employer->image_url)->fit(480,640)->save();
         }
         $employer->fill($request->except(['image_url']))->update();
         return redirect(route('admin.employer.index'));

@@ -15,7 +15,7 @@ class PostController extends Controller
     public function index(Request $request, Category $category)
     {
         $title = 'Elementlar';
-        $posts = Posts::all();
+        $posts = Posts::where('category_id',$category->id)->get();
         return view('admin.post.index', compact('posts', 'category', 'title'));
     }
 
@@ -32,7 +32,7 @@ class PostController extends Controller
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $post['image_url'] = $filename;
-            Image::make('uploads/' . $post['image_url'])->resize(1700, 1500)->save();
+            Image::make('uploads/' . $post['image_url'])->fit(1000, 600)->save();
         }
         $post['category_id'] = $categoryId;
         Posts::create($post);
@@ -52,7 +52,7 @@ class PostController extends Controller
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $post->image_url = $filename;
-            Image::make('uploads/' . $post->image_url)->resize(1700, 1500)->save();
+            Image::make('uploads/' . $post->image_url)->fit(1000, 600)->save();
         }
         $post->fill($request->except(['image_url', 'hidden']))->update();
         return redirect(route('admin.post.index', ['category' => $post->category_id]));

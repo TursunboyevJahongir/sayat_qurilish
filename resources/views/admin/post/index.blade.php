@@ -5,7 +5,7 @@
 @section('title', $title)
 
 @section('content_header')
-    <h1>{{$category->title}}</h1>
+    <h1>{{$category->short_title}}</h1>
 @stop
 @section('content')
     <div class="card">

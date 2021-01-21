@@ -76,14 +76,13 @@
                 @endforeach
                 </tbody>
             </table>
+            <div class="d-flex justify-content-center" id="myformid">
+                {!! $projects->appends($_GET)->links() !!}
+            </div>
         </div>
         <!-- /.card-body -->
     </div>
 
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/vendor/css/admin_custom.css">
 
 @stop
 

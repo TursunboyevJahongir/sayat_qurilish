@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\SlideController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -69,4 +70,12 @@ Route::middleware('auth:web')->prefix('admin')->group(function () {
     Route::get('news/edit/{news}', [NewsController::class, 'edit'])->name('admin.news.edit');
     Route::put('news/update/{news}', [NewsController::class, 'update'])->name('admin.news.update');
     Route::delete('news/delete/{news}', [NewsController::class, 'destroy'])->name('admin.news.delete');
+
+    //Slide
+    Route::get('slides', [SlideController::class, 'index'])->name('admin.slide.index');
+    Route::get('slide/create', [SlideController::class, 'form'])->name('admin.slide.form');
+    Route::post('slide/create', [SlideController::class, 'create'])->name('admin.slide.create');
+    Route::get('slide/edit/{slide}', [SlideController::class, 'edit'])->name('admin.slide.edit');
+    Route::put('slide/update/{slide}', [SlideController::class, 'update'])->name('admin.slide.update');
+    Route::delete('slide/delete/{slide}', [SlideController::class, 'destroy'])->name('admin.slide.delete');
 });

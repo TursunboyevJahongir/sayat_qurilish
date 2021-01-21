@@ -24,7 +24,7 @@ class ProjectController extends Controller
     public function index()
     {
         $title = 'Proektlar';
-        $projects = Projects::all();
+        $projects = Projects::query()->paginate(10);
         return view('admin.project.index', compact('projects', 'title'));
     }
 
@@ -47,7 +47,7 @@ class ProjectController extends Controller
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $project['image_url'] = $filename;
-            Image::make('uploads/' . $project['image_url'])->resize(1700, 1500)->save();
+            Image::make('uploads/' . $project['image_url'])->fit(1000, 600)->save();
         }
         $project['hidden'] = $request->hidden == 'on';
         Projects::create($project);
@@ -80,7 +80,7 @@ class ProjectController extends Controller
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $project->image_url = $filename;
-            Image::make('uploads/' . $project->image_url)->resize(1700, 1500)->save();
+            Image::make('uploads/' . $project->image_url)->fit(1000, 600)->save();
         }
         $project->hidden = $request->hidden == 'on';
         $project->fill($request->except(['image_url', 'hidden']))->update();
