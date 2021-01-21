@@ -47,20 +47,15 @@
                               placeholder="Matn ..."></textarea>
                 </div>
 
-
-                <div class="form-group row">
-
-                    <div class="com-11">
-                        <label for="exampleInputFile">Rasmi</label>
-                        <div class="input-group">
-                            <div class="custom-file">
-                                <input type="file" accept="image/*" class="custom-file-input" name="image_url"
-                                       id="exampleInputFile">
-                                <label class="custom-file-label" for="exampleInputFile">Rasmni tanlang</label>
-                            </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">Rasmi</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" accept="image/*" class="custom-file-input" name="image_url"
+                                   id="exampleInputFile" required>
+                            <label class="custom-file-label" for="exampleInputFile">Rasmni tanlang</label>
                         </div>
                     </div>
-
                 </div>
 
                 <label>Boshlanish sanasi</label>

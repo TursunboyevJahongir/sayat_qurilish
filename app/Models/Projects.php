@@ -51,4 +51,11 @@ class Projects extends Model
     protected $attributes = [
         'hidden' => true,
     ];
+
+
+    public function getShortTitleAttribute(): string
+    {
+        return Str::limit($this->title, 30, '[...]');
+    }
+
 }

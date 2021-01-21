@@ -8,6 +8,7 @@ use App\Http\Requests\PostUpdateRequest;
 use App\Models\Category;
 use App\Models\Posts;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class PostController extends Controller
 {
@@ -26,9 +27,15 @@ class PostController extends Controller
 
     public function create(PostRequest $request, $categoryId)
     {
-
-        $all = array_merge($request->validated(), ['category_id' => $categoryId]);
-        Posts::create($all);
+        $post = $request->validated();
+        if ($request->file('image_url')) {
+            $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
+            $request->image_url->storeAs('', $filename);
+            $post['image_url'] = $filename;
+            Image::make('uploads/' . $post['image_url'])->resize(1700, 1500)->save();
+        }
+        $post['category_id'] = $categoryId;
+        Posts::create($post);
         return redirect(route('admin.post.index', ['category' => $categoryId]));
     }
 
@@ -40,7 +47,14 @@ class PostController extends Controller
 
     public function update(PostUpdateRequest $request, Posts $post)
     {
-        $post->update($request->validated());
+        if ($request->file('image_url')) {
+            @unlink('uploads/' . $post->image_url);
+            $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
+            $request->image_url->storeAs('', $filename);
+            $post->image_url = $filename;
+            Image::make('uploads/' . $post->image_url)->resize(1700, 1500)->save();
+        }
+        $post->fill($request->except(['image_url', 'hidden']))->update();
         return redirect(route('admin.post.index', ['category' => $post->category_id]));
     }
 

@@ -16,11 +16,18 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="{{ route('admin.post.create',['category' => $category->id]) }}" method="post">
+        <form role="form" action="{{ route('admin.post.create',['category' => $category->id]) }}" method="post"
+              enctype="multipart/form-data">
             @csrf
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Mavzusi</label>
@@ -30,6 +37,19 @@
                 <div class="form-group">
                     <label>Matni</label>
                     <textarea class="form-control" rows="3" name='description' placeholder="Matn ..."></textarea>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputFile">Rasmi</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" accept="image/*" class="custom-file-input" name="image_url"
+                                   id="exampleInputFile" required>
+                            <label class="custom-file-label" for="exampleInputFile">Rasmni tanlang</label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- /.card-body -->

@@ -21,6 +21,7 @@
                 <thead>
                 <tr>
                     <th>#</th>
+                    <th></th>
                     <th>Mavzusi</th>
                     <th>Matni</th>
                     <th></th>
@@ -31,12 +32,21 @@
                     @foreach($posts as $num => $post)
                         <td>{{$num+1}}</td>
                         <td>
+                            <div class="product-image-thumb active">
+                                <a href="{{route('admin.post.edit', ['post' => $post->id])}}">
+                                    <img src="{{'/uploads/'.$post->image_url}}"
+                                         alt="Product Image">
+                                </a>
+                            </div>
+                        </td>
+                        <td>
                             <a href="{{route('admin.post.edit', ['post' => $post->id])}}"
                                data-toggle="tooltip"
                                title="Elementni tahrirlash">{{$post->short_title}}</i>
                             </a>
                         </td>
                         <td>{{$post->short_des}}</td>
+
                         <td>
                             <div class="btn-group mr-2">
 

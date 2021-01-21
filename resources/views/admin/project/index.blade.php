@@ -20,6 +20,7 @@
                 <thead>
                 <tr>
                     <th>#</th>
+                    <th></th>
                     <th>Nomi</th>
                     <th>Dan</th>
                     <th>Gacha</th>
@@ -31,10 +32,18 @@
                 <tr>
                     @foreach($projects as $num => $project)
                         <td>{{$num+1}}</td>
+                        <td>
+                            <div class="product-image-thumb active">
+                                <a href="{{route('admin.project.edit', ['project' => $project->id])}}">
+                                    <img src="{{'/uploads/'.$project->image_url}}"
+                                         alt="Product Image">
+                                </a>
+                            </div>
+                        </td>
 
                         <td>
                             <a href="{{route('admin.project.edit', ['project' => $project->id])}}">
-                                {{$project->title}}
+                                {{$project->short_title}}
                             </a>
                         </td>
                         <td>

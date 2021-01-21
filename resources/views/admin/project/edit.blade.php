@@ -50,8 +50,9 @@
 
 
                 <div class="form-group row">
-                    <div class="col-1">
-                        <img src="{{'/uploads/'. $project->image_url}}" alt="" class=" img-fluid">
+                    <div class="product-image-thumb">
+                        <img src="{{'/uploads/'.$project->image_url}}"
+                             alt="Product Image">
                     </div>
                     <div class="com-11">
                         <label for="exampleInputFile">Rasmi</label>

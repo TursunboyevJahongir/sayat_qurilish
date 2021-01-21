@@ -25,7 +25,8 @@ class PostUpdateRequest extends FormRequest
     {
         return [
             'title' => 'nullable|string',
-            'description' => 'nullable'
+            'description' => 'nullable',
+            'image_url' => 'nullable|image'
         ];
     }
 }
