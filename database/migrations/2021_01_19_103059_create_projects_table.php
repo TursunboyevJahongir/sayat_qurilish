@@ -19,7 +19,7 @@ class CreateProjectsTable extends Migration
             $table->string('image_url', 1024);
             $table->string('address');
             $table->date('start_date');
-            $table->date('end_date');
+            $table->date('end_date')->nullable();
             $table->string('short_description');
             $table->longText('description');
             $table->boolean('hidden')->default(false);

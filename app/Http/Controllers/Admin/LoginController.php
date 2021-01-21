@@ -30,15 +30,16 @@ class LoginController extends Controller
             return redirect('/admin');
         }
 
-        return redirect(route('login'))->withErrors([
+        return redirect(route('admin.login'))->withErrors([
             'login' => __('auth.failed')
         ]);
     }
 
-    public function logout() {
+    public function logout()
+    {
         Session::flush();
         Auth::logout();
-        return Redirect(route('home'));
+        return Redirect(route('admin.home'));
     }
 
 }

@@ -16,7 +16,7 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="{{ route('post.create',['category' => $category->id]) }}" method="post">
+        <form role="form" action="{{ route('admin.post.create',['category' => $category->id]) }}" method="post">
             @csrf
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -26,11 +26,11 @@
                     <label for="exampleInputEmail1">Mavzusi</label>
                     <input type="text" class="form-control" name="title" placeholder="Mavzu" required>
                 </div>
-                    <!-- textarea -->
-                    <div class="form-group">
-                        <label>Matni</label>
-                        <textarea class="form-control" rows="3" name ='description' placeholder="Matn ..."></textarea>
-                    </div>
+                <!-- textarea -->
+                <div class="form-group">
+                    <label>Matni</label>
+                    <textarea class="form-control" rows="3" name='description' placeholder="Matn ..."></textarea>
+                </div>
             </div>
             <!-- /.card-body -->
 

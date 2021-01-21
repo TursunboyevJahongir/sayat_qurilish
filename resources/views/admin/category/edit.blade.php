@@ -16,7 +16,7 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="{{ route('category.update', ['category' => $category->id])}}" method="post">
+        <form role="form" action="{{ route('admin.category.update', ['category' => $category->id])}}" method="post">
             @csrf
             @method('PUT')
             <div class="card-body">

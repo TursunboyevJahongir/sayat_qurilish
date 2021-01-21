@@ -16,14 +16,77 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="{{ route('category.update', ['category' => $category->id])}}" method="post">
+        <form role="form" action="{{ route('admin.project.update', ['project' => $project->id])}}"
+              method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Kategorya nomi </label>
+                    <label for="exampleInputEmail1">Proekt nomi </label>
                     <input type="text" class="form-control" name="title" placeholder="Kategorya nomi"
-                           value="{{$category->title}}" required>
+                           value="{{$project->title}}" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Qisqacha Matni</label>
+                    <textarea class="form-control" rows="3" name='short_description'
+                              placeholder="Qisqacha ...">{{$project->short_description}}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Matni</label>
+                    <textarea class="form-control" rows="3" name='description'
+                              placeholder="Matn ...">{{$project->description}}</textarea>
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-1">
+                        <img src="{{'/uploads/'. $project->image_url}}" alt="" class=" img-fluid">
+                    </div>
+                    <div class="com-11">
+                        <label for="exampleInputFile">Rasmi</label>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" accept="image/*" class="custom-file-input" name="image_url"
+                                       id="exampleInputFile">
+                                <label class="custom-file-label" for="exampleInputFile">Rasmni tanlang</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <label>Boshlanish sanasi</label>
+                <input type="date" name="start_date" class="form-control"
+                       value="{{date('Y-m-d', strtotime($project->start_date))}}" data-target="#reservationdate"
+                       required>
+
+                <label>Tugallanish sanisi</label>
+                <input type="date" name="end_date" class="form-control"
+                       value="{{date('Y-m-d', strtotime($project->end_date))}}" data-target="#reservationdate">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Manzil </label>
+                    <input type="text" class="form-control" value="{{$project->address}}" name="address"
+                           placeholder="Manzili..."
+                           required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                        <input type="checkbox" class="custom-control-input" name="hidden"
+                               {{($project->hidden)?'checked':''}}  id="customSwitch3">
+                        <label class="custom-control-label" for="customSwitch3">holati(o'chiq,faol)</label>
+                    </div>
                 </div>
             </div>
             <!-- /.card-body -->
@@ -41,5 +104,4 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
 @stop

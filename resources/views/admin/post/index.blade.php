@@ -11,7 +11,7 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">{{$title}}</h3>
-            <a href="{{route('post.form',['category'=>$category->id])}}" type="button"
+            <a href="{{route('admin.post.form',['category'=>$category->id])}}" type="button"
                class="btn btn-outline-success float-right btn-sm"
                data-toggle="tooltip" title="yangi maxsulot"> <i class="fa fa-plus"></i></a>
         </div>
@@ -31,7 +31,7 @@
                     @foreach($posts as $num => $post)
                         <td>{{$num+1}}</td>
                         <td>
-                            <a href="{{route('post.edit', ['post' => $post->id])}}"
+                            <a href="{{route('admin.post.edit', ['post' => $post->id])}}"
                                data-toggle="tooltip"
                                title="Elementni tahrirlash">{{$post->short_title}}</i>
                             </a>
@@ -40,12 +40,12 @@
                         <td>
                             <div class="btn-group mr-2">
 
-                                <a href="{{route('post.edit', ['post' => $post->id])}}" type="button"
+                                <a href="{{route('admin.post.edit', ['post' => $post->id])}}" type="button"
                                    class="btn btn-outline-warning btn-sm" data-toggle="tooltip"
                                    title="Elementni tahrirlash"><i class="fa fa-edit"></i>
                                 </a>
                                 <x-destroy-button message="Elementni o'chirish"
-                                                  :url="route('post.delete', ['post' => $post->id])"/>
+                                                  :url="route('admin.post.delete', ['post' => $post->id])"/>
                             </div>
                         </td>
                 </tr>

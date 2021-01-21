@@ -45,7 +45,7 @@ class CategoryController extends Controller
             'title' => ['required', 'unique:categories,title'],
         ]);
         Category::create($request->all());
-        return redirect(route('category.index'));
+        return redirect(route('admin.category.index'));
     }
 
     public function edit(Category $category)
@@ -67,7 +67,7 @@ class CategoryController extends Controller
             'title' => ['required', 'unique:categories,title'],
         ]);
         $category->update($request->all());
-        return redirect(route('category.index'));
+        return redirect(route('admin.category.index'));
     }
 
     /**

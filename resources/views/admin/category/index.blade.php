@@ -11,7 +11,7 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Kategoryalar</h3>
-            <a href="{{route('category.form')}}" type="button" class="btn btn-outline-success float-right btn-sm"
+            <a href="{{route('admin.category.form')}}" type="button" class="btn btn-outline-success float-right btn-sm"
                data-toggle="tooltip" title="kategorya qo'shish"> <i class="fa fa-plus"></i></a>
         </div>
         <!-- /.card-header -->
@@ -30,21 +30,21 @@
                         <td>{{$num+1}}</td>
 
                         <td>
-                            <a href="{{route('post.index', ['category' => $category->id])}}">
+                            <a href="{{route('admin.post.index', ['category' => $category->id])}}">
                                 {{$category->short_title}}
                             </a>
                         </td>
                         <td>
                             <div class="btn-group mr-2">
-                                <a href="{{route('post.index', ['category' => $category->id])}}" type="button"
+                                <a href="{{route('admin.post.index', ['category' => $category->id])}}" type="button"
                                    class="btn btn-outline-secondary btn-sm"><i class="fa fa-eye"></i>
                                 </a>
-                                <a href="{{route('category.edit', ['category' => $category->id])}}" type="button"
+                                <a href="{{route('admin.category.edit', ['category' => $category->id])}}" type="button"
                                    class="btn btn-outline-warning btn-sm" data-toggle="tooltip"
                                    title="kategoryani taxrirlash"><i class="fa fa-edit"></i>
                                 </a>
                                 <x-destroy-button message="Kategoryani o'chirish"
-                                                  :url="route('category.delete', ['category' => $category->id])"/>
+                                                  :url="route('admin.category.delete', ['category' => $category->id])"/>
                             </div>
                         </td>
                 </tr>

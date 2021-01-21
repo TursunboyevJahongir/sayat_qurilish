@@ -38,22 +38,17 @@ class Projects extends Model
     ];
 
     protected $casts = [
-        'start_date' => 'date',
+        'hidden' => 'boolean',
+        'start_date' => 'date:d.m.Y',
         'end_date' => 'date'
     ];
 
-    public function getShortTitleAttribute(): string
-    {
-        return Str::limit($this->title, 30, '[...]');
-    }
-
-    public function getShortDescriptionAttribute(): string
-    {
-        return Str::limit($this->description, 30, '[...]');
-    }
-
-    public function getShortDesAttribute(): string
-    {
-        return Str::limit($this->short_description, 30, '[...]');
-    }
+    /**
+     * The model's default values for attributes.
+     *
+     * @var array
+     */
+    protected $attributes = [
+        'hidden' => true,
+    ];
 }
