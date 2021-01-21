@@ -29,7 +29,7 @@ class PostController extends Controller
 
         $all = array_merge($request->validated(), ['category_id' => $categoryId]);
         Posts::create($all);
-        return redirect(route('post.index', ['category' => $categoryId]));
+        return redirect(route('admin.post.index', ['category' => $categoryId]));
     }
 
     public function edit(Posts $post)
@@ -41,7 +41,7 @@ class PostController extends Controller
     public function update(PostUpdateRequest $request, Posts $post)
     {
         $post->update($request->validated());
-        return redirect(route('post.index',['category'=>$post->category_id]));
+        return redirect(route('admin.post.index', ['category' => $post->category_id]));
     }
 
 

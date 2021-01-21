@@ -16,7 +16,7 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="{{ route('category.create') }}" method="post">
+        <form role="form" action="{{ route('admin.category.create') }}" method="post">
             @csrf
             <div class="card-body">
                 <div class="form-group">

@@ -237,6 +237,12 @@ return [
 //            'label'       => \App\Models\Category::,
             'label_color' => 'success',
         ],
+        [
+            'text' => 'Proektlar',
+            'url'  => 'admin/projects',
+            'icon' => 'fa fa-circle',
+            'label_color' => 'success',
+        ],
         ['header' => 'account_settings'],
         [
             'text' => 'profile',

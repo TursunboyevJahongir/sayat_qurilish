@@ -11,7 +11,7 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Proektlar</h3>
-            <a href="{{route('category.form')}}" type="button" class="btn btn-outline-success float-right btn-sm"
+            <a href="{{route('admin.project.form')}}" type="button" class="btn btn-outline-success float-right btn-sm"
                data-toggle="tooltip" title="kategorya qo'shish"> <i class="fa fa-plus"></i></a>
         </div>
         <!-- /.card-header -->
@@ -19,45 +19,48 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    'title',
-                    'address',
-                    'image_url',
-                    'start_date',
-                    'end_date',
-                    'short_description',
-                    'description',
-                    'hidden'
                     <th>#</th>
                     <th>Nomi</th>
-                    <th>Matni</th>
-                    <th>Qisqacha Matni</th>
-                    <th>Boshlan Sanasi</th>
-                    <th>tugallangan Sanasi</th>
-                    <th>ko'rinishi</th>
+                    <th>Dan</th>
+                    <th>Gacha</th>
+                    <th>holati</th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    @foreach($categories as $num => $category)
+                    @foreach($projects as $num => $project)
                         <td>{{$num+1}}</td>
 
                         <td>
-                            <a href="{{route('post.index', ['category' => $category->id])}}">
-                                {{$category->short_title}}
+                            <a href="{{route('admin.project.edit', ['project' => $project->id])}}">
+                                {{$project->title}}
                             </a>
                         </td>
                         <td>
+                            {{$project->start_date}}
+                        </td>
+                        <td>
+                            {{$project->end_date}}
+                        </td>
+                        @if($project->hidden)
+                            <td style="background-color: #00b44e">
+                                <b>faol</b>
+                            </td>
+                        @else
+                            <td style="background-color: #bd081d">
+                                <b>o'chiq</b>
+                            </td>
+                        @endif
+
+                        <td>
                             <div class="btn-group mr-2">
-                                <a href="{{route('post.index', ['category' => $category->id])}}" type="button"
-                                   class="btn btn-outline-secondary btn-sm"><i class="fa fa-eye"></i>
-                                </a>
-                                <a href="{{route('category.edit', ['category' => $category->id])}}" type="button"
+                                <a href="{{route('admin.project.edit', ['project' => $project->id])}}" type="button"
                                    class="btn btn-outline-warning btn-sm" data-toggle="tooltip"
-                                   title="kategoryani taxrirlash"><i class="fa fa-edit"></i>
+                                   title="proektni taxrirlash"><i class="fa fa-edit"></i>
                                 </a>
-                                <x-destroy-button message="Kategoryani o'chirish"
-                                                  :url="route('category.delete', ['category' => $category->id])"/>
+                                <x-destroy-button message="proektni o'chirish"
+                                                  :url="route('admin.project.delete', ['project' => $project->id])"/>
                             </div>
                         </td>
                 </tr>
