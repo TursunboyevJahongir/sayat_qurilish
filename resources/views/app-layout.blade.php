@@ -72,11 +72,11 @@
             <!-- end languages -->
             <div class="site-menu">
                 <ul>
-                    <li><a href="#">Kompaniya haqida</a>
+                    <li><a href="{{route('home.about')}}">Kompaniya haqida</a>
                     </li>
                     <li><a href="{{route('project.index')}}">Loyihalar</a></li>
                     <li><a href="{{route('news.index')}}">Yangiliklar</a></li>
-                    <li><a href="{{route('project.index')}}">Aloqa</a></li>
+                    <li><a href="{{route('home.contacts')}}">Aloqa</a></li>
                 </ul>
             </div>
             <!-- end site-menu -->
@@ -93,15 +93,12 @@
                 Qurilish</a></div>
         <div class="site-menu">
             <ul>
-                <li><a href="#">Kompaniya haqida</a></li>
+                <li><a href="{{route('home.about')}}">Kompaniya haqida</a></li>
                 <li><a href="{{route('catalog.index')}}">Katalog</a></li>
                 <li><a href="{{route('project.index')}}">Loyihalar</a></li>
                 <li><a href="{{route('news.index')}}">Yangiliklar</a></li>
             </ul>
         </div>
-        <!-- end site-menu -->
-        <div class="search"><i class="lni lni-search-alt"></i></div>
-        <!-- end search -->
 
         <div class="hamburger">
             <div id="hamburger"><span></span> <span></span> <span></span></div>
@@ -109,7 +106,7 @@
         </div>
         <!-- end hamburger -->
         <!-- end hamburher -->
-        <a href="#sales-specialist-form" class="navbar-button" data-fancybox><i class="lni lni-mobile"></i> <span>BIZ BILAN BOG'LANING</span></a>
+        <a href="{{route('home.contacts')}}" class="navbar-button"><i class="lni lni-mobile"></i> <span>BIZ BILAN BOG'LANING</span></a>
     </div>
     <!-- end container -->
 </nav>
@@ -124,8 +121,8 @@
                 <h2><b>Yaxshi</b> va <b>chiroyli</b> yashang</h2>
                 <div class="button">ALOQA UCHUN <i class="lni lni-arrow-right"></i></div>
                 <div class="sales-representive">
-                    <figure><img src="images/author01.jpg" alt="Image"></figure>
-                    Telefon raqam <b>+99890 111 22 33</b></div>
+                    <figure><img src="/images/author01.jpg" alt="Image"></figure>
+                    Telefon raqam <b>+99862-225-62-63</b></div>
                 <!-- end sales-representive -->
             </div>
             <!-- end col-12  -->
@@ -143,7 +140,7 @@
                 <address>
                     <p>Xorazm viloyati<br>
                         Xiva tumani, Sayot</p>
-                    <p>+99890 111 22 33</p>
+                    <p>+99862-225-62-63</p>
                 </address>
             </div>
             <!-- end col-4 -->
@@ -157,7 +154,7 @@
             <!-- end col-4 -->
             <div class="col-lg-4">
                 <h6 class="widget-title">Savol bormi?</h6>
-                <p><a href="#" class="btn btn-light">XABAR YUBORISH</a></p>
+                <p><a href="{{route('home.contacts')}}" class="btn btn-light">XABAR YUBORISH</a></p>
             </div>
             <!-- end col-4 -->
             <div class="col-12">

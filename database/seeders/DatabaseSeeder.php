@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Data;
 use App\Models\Employer;
 use App\Models\Message;
 use App\Models\News;
@@ -29,5 +30,6 @@ class DatabaseSeeder extends Seeder
          Message::factory(10)->create();
          Slideshow::factory(10)->create();
          Employer::factory(10)->create();
+         Data::factory(10)->create();
     }
 }
