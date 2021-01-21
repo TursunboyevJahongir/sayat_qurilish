@@ -252,43 +252,44 @@
                 </div>
                 <!-- end col-12 -->
                 <div class="col-lg-5">
-                    <div class="recent-news">
-                        <figure><img src="images/slide01.jpg" alt="Image"></figure>
-                        <div class="content"><small>29 February, 2020</small>
-                            <h3><a href="#">Result of a challenge I participated in as a guest on The Futuristic</a>
-                            </h3>
-                            <!-- end author -->
-                        </div>
-                        <!-- end content -->
-                    </div>
+                    <?php
+                        /**
+                         * @var \App\Models\News[] $news
+                         */
+                    ?>
+                    @foreach($news as $new)
+                        @if($loop->index === 0)
+                                <div class="recent-news">
+                                    <figure><img src="{{$new->image_url}}" alt="Image"></figure>
+                                    <div class="content"><small>{{$new->created_at}}</small>
+                                        <h3><a href="{{route('news.view', ['id' => $new->id])}}">{{\Illuminate\Support\Str::limit($new->title, 27, '...')}}</a>
+                                        </h3>
+                                        <!-- end author -->
+                                    </div>
+                                    <!-- end content -->
+                                </div>
+                            @endif
+                    @endforeach
                     <!-- end recent-news -->
                 </div>
                 <!-- end col-5 -->
                 <div class="col-lg-7">
                     <div class="row inner">
-                        <div class="col-md-6">
-                            <div class="recent-news">
-                                <figure><img src="images/slide02.jpg" alt="Image"></figure>
-                                <div class="content"><small>29 February, 2020</small>
-                                    <h3><a href="#">Challenge I participated in as a guest on all font</a></h3>
-                                    <!-- end author -->
+                        @foreach($news as $new)
+                            @if($loop->index !== 0)
+                                <div class="col-md-6">
+                                    <div class="recent-news">
+                                        <figure><img src="{{$new->image_url}}" alt="Image"></figure>
+                                        <div class="content"><small>{{$new->created_at}}</small>
+                                            <h3><a href="{{route('news.view', ['id' => $new->id])}}">{{\Illuminate\Support\Str::limit($new->title, 16, '...')}}</a>
+                                            </h3>
+                                            <!-- end author -->
+                                        </div>
+                                        <!-- end content -->
+                                    </div>
                                 </div>
-                                <!-- end content -->
-                            </div>
-                            <!-- end recent-news -->
-                        </div>
-                        <!-- end col-4 -->
-                        <div class="col-md-6">
-                            <div class="recent-news">
-                                <figure><img src="images/slide03.jpg" alt="Image"></figure>
-                                <div class="content"><small>29 February, 2020</small>
-                                    <h3><a href="#">Participated challenge in as a guest on The Future</a></h3>
-                                    <!-- end author -->
-                                </div>
-                                <!-- end content -->
-                            </div>
-                            <!-- end recent-news -->
-                        </div>
+                                @endif
+                        @endforeach
                         <!-- end col-4 -->
                     </div>
                     <!-- end row inner -->

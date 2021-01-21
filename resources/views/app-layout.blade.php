@@ -75,7 +75,7 @@
                     <li><a href="#">Kompaniya haqida</a>
                     </li>
                     <li><a href="{{route('project.index')}}">Loyihalar</a></li>
-                    <li><a href="{{route('project.index')}}">Yangiliklar</a></li>
+                    <li><a href="{{route('news.index')}}">Yangiliklar</a></li>
                     <li><a href="{{route('project.index')}}">Aloqa</a></li>
                 </ul>
             </div>
@@ -96,7 +96,7 @@
                 <li><a href="#">Kompaniya haqida</a></li>
                 <li><a href="{{route('catalog.index')}}">Katalog</a></li>
                 <li><a href="{{route('project.index')}}">Loyihalar</a></li>
-                <li><a href="news.html">Yangiliklar</a></li>
+                <li><a href="{{route('news.index')}}">Yangiliklar</a></li>
             </ul>
         </div>
         <!-- end site-menu -->

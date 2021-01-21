@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\News;
 use App\Models\Posts;
 use App\Models\Projects;
 use App\Models\User;
@@ -21,5 +22,6 @@ class DatabaseSeeder extends Seeder
          Projects::factory(10)->create();
          Category::factory(10)->create();
          Posts::factory(10)->create();
+         News::factory(10)->create();
     }
 }
