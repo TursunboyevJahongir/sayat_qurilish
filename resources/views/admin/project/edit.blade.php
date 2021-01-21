@@ -39,13 +39,13 @@
                 <div class="form-group">
                     <label>Qisqacha Matni</label>
                     <textarea class="form-control" rows="3" name='short_description'
-                              placeholder="Qisqacha ...">{{$project->short_description}}</textarea>
+                              placeholder="Qisqacha ..." required>{{$project->short_description}}</textarea>
                 </div>
 
                 <div class="form-group">
                     <label>Matni</label>
                     <textarea class="form-control" rows="3" name='description'
-                              placeholder="Matn ...">{{$project->description}}</textarea>
+                              placeholder="Matn ..." required>{{$project->description}}</textarea>
                 </div>
 
 
@@ -69,8 +69,7 @@
 
                 <label>Boshlanish sanasi</label>
                 <input type="date" name="start_date" class="form-control"
-                       value="{{date('Y-m-d', strtotime($project->start_date))}}" data-target="#reservationdate"
-                       required>
+                       value="{{date('Y-m-d', strtotime($project->start_date))}}" data-target="#reservationdate">
 
                 <label>Tugallanish sanisi</label>
                 <input type="date" name="end_date" class="form-control"
@@ -78,8 +77,7 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Manzil </label>
                     <input type="text" class="form-control" value="{{$project->address}}" name="address"
-                           placeholder="Manzili..."
-                           required>
+                           placeholder="Manzili...">
                 </div>
                 <br>
                 <div class="form-group">

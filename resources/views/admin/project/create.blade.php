@@ -38,13 +38,13 @@
                 <div class="form-group">
                     <label>Qisqacha Matni</label>
                     <textarea class="form-control" rows="3" name='short_description'
-                              placeholder="Qisqacha ..."></textarea>
+                              placeholder="Qisqacha ..." required></textarea>
                 </div>
 
                 <div class="form-group">
                     <label>Matni</label>
                     <textarea class="form-control" rows="3" name='description'
-                              placeholder="Matn ..."></textarea>
+                              placeholder="Matn ..." required></textarea>
                 </div>
 
                 <div class="form-group">

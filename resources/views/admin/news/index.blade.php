@@ -5,13 +5,14 @@
 @section('title', $title)
 
 @section('content_header')
-    <h1>{{$category->title}}</h1>
+    <h1>{{$title}}</h1>
 @stop
 @section('content')
+
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">{{$title}}</h3>
-            <a href="{{route('admin.post.form',['category'=>$category->id])}}" type="button"
+            <a href="{{route('admin.news.form')}}" type="button"
                class="btn btn-outline-success float-right btn-lg"
                data-toggle="tooltip" title="yangi maxsulot"> <i class="fa fa-plus"></i></a>
         </div>
@@ -21,41 +22,29 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th></th>
-                    <th>Mavzusi</th>
-                    <th>Matni</th>
+                    <th>Mavzu</th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    @foreach($posts as $num => $post)
+                    @foreach($news as $num => $item)
                         <td>{{$num+1}}</td>
                         <td>
-                            <div class="product-image-thumb active">
-                                <a href="{{route('admin.post.edit', ['post' => $post->id])}}">
-                                    <img src="{{'/uploads/'.$post->image_url}}"
-                                         alt="Product Image">
-                                </a>
-                            </div>
-                        </td>
-                        <td>
-                            <a href="{{route('admin.post.edit', ['post' => $post->id])}}"
+                            <a href="{{route('admin.news.edit', ['news' => $item->id])}}"
                                data-toggle="tooltip"
-                               title="Elementni tahrirlash">{{$post->short_title}}</i>
+                               title="Yangilikni tahrirlash">{{$item->title}}</i>
                             </a>
                         </td>
-                        <td>{{$post->short_des}}</td>
-
                         <td>
                             <div class="btn-group mr-2">
 
-                                <a href="{{route('admin.post.edit', ['post' => $post->id])}}" type="button"
+                                <a href="{{route('admin.news.edit', ['news' => $item->id])}}" type="button"
                                    class="btn btn-outline-warning btn-lg" data-toggle="tooltip"
-                                   title="Elementni tahrirlash"><i class="fa fa-edit"></i>
+                                   title="Yangilikni tahrirlash"><i class="fa fa-edit"></i>
                                 </a>
-                                <x-destroy-button message="Elementni o'chirish"
-                                                  :url="route('admin.post.delete', ['post' => $post->id])"/>
+                                <x-destroy-button message="Yangilik o'chirish"
+                                                  :url="route('admin.news.delete', ['news' => $item->id])"/>
                             </div>
                         </td>
                 </tr>
@@ -65,11 +54,6 @@
         </div>
         <!-- /.card-body -->
     </div>
-
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/vendor/css/admin_custom.css">
 
 @stop
 

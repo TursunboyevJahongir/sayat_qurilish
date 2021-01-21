@@ -5,18 +5,18 @@
 @section('title', $title)
 
 @section('content_header')
-    <h1>{{$post->category->short_title}}</h1>
+    <h1>{{$title}}</h1>
 @stop
 
 @section('content')
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Elementini tahrirlash</h3>
+            <h3 class="card-title">Xodim haqqidagi malumotlarni tahrirlash</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="{{ route('admin.post.update', ['post' => $post->id])}}" method="post"
+        <form role="form" action="{{ route('admin.employer.update', ['employer' => $employer->id])}}" method="post"
               enctype="multipart/form-data">
             @csrf
             @method('PUT')
@@ -31,21 +31,22 @@
             @endif
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Mavzusi </label>
-                    <input type="text" class="form-control" name="title" value="{{$post->title}}" placeholder="Mavzu" required>
+                    <label for="exampleInputEmail1">Xodim ismi va famlyasi</label>
+                    <input type="text" class="form-control" name="full_name" value="{{$employer->full_name}}"
+                           placeholder="Ism Familya" required>
                 </div>
                 <!-- textarea -->
                 <div class="form-group">
-                    <label>Matni</label>
-                    <textarea class="form-control" rows="3" name='description'
-                              placeholder="Matn ..." required>{{$post->description}}</textarea>
+                    <label for="exampleInputEmail1">Xodim Mansabi</label>
+                    <input type="text" class="form-control" name="role" value="{{$employer->role}}"
+                           placeholder="Mansabi" required>
                 </div>
             </div>
             <!-- /.card-body -->
             <div class="card-body">
                 <div class="form-group row">
                     <div class="product-image-thumb active">
-                        <img src="{{'/uploads/'.$post->image_url}}"
+                        <img src="{{'/uploads/'.$employer->image_url}}"
                              alt="Product Image">
                     </div>
                     <div class="com-11">

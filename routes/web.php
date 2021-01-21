@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\EmployerController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\HomeController;
@@ -51,4 +53,20 @@ Route::middleware('auth:web')->prefix('admin')->group(function () {
     Route::get('project/edit/{project}', [ProjectController::class, 'edit'])->name('admin.project.edit');
     Route::put('project/update/{project}', [ProjectController::class, 'update'])->name('admin.project.update');
     Route::delete('project/delete/{project}', [ProjectController::class, 'destroy'])->name('admin.project.delete');
+
+    //Employers
+    Route::get('employers', [EmployerController::class, 'index'])->name('admin.employer.index');
+    Route::get('employer/create', [EmployerController::class, 'form'])->name('admin.employer.form');
+    Route::post('employer/create', [EmployerController::class, 'create'])->name('admin.employer.create');
+    Route::get('employer/edit/{employer}', [EmployerController::class, 'edit'])->name('admin.employer.edit');
+    Route::put('employer/update/{employer}', [EmployerController::class, 'update'])->name('admin.employer.update');
+    Route::delete('employer/delete/{employer}', [EmployerController::class, 'destroy'])->name('admin.employer.delete');
+
+    //News
+    Route::get('news', [NewsController::class, 'index'])->name('admin.news.index');
+    Route::get('news/create', [NewsController::class, 'form'])->name('admin.news.form');
+    Route::post('news/create', [NewsController::class, 'create'])->name('admin.news.create');
+    Route::get('news/edit/{news}', [NewsController::class, 'edit'])->name('admin.news.edit');
+    Route::put('news/update/{news}', [NewsController::class, 'update'])->name('admin.news.update');
+    Route::delete('news/delete/{news}', [NewsController::class, 'destroy'])->name('admin.news.delete');
 });

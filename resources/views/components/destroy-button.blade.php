@@ -2,7 +2,7 @@
       method="POST">
     @csrf
     @method('DELETE')
-    <button type="submit" class="btn btn-outline-danger btn-sm delete-confirmation" data-toggle="tooltip"
+    <button type="submit" class="btn btn-outline-danger btn-lg delete-confirmation" data-toggle="tooltip"
             title="{{$message}}"><i class="fa fa-trash"></i>
     </button>
 </form>

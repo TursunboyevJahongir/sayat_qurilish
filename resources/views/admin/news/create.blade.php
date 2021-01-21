@@ -5,19 +5,18 @@
 @section('title', $title)
 
 @section('content_header')
-    <h1>{{$category->short_title}} kategoryaga </h1>
+    <h1>{{$title}}</h1>
 @stop
 
 @section('content')
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Element qo'shish</h3>
+            <h3 class="card-title">Yangilik qo'shish</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="{{ route('admin.post.create',['category' => $category->id]) }}" method="post"
-              enctype="multipart/form-data">
+        <form role="form" action="{{ route('admin.news.create') }}" method="post">
             @csrf
             @if (count($errors) > 0)
                 <div class="alert alert-danger">
@@ -36,34 +35,16 @@
                 <!-- textarea -->
                 <div class="form-group">
                     <label>Matni</label>
-                    <textarea class="form-control" rows="3" name='description' placeholder="Matn ..." required></textarea>
-                </div>
-            </div>
-
-            <div class="card-body">
-                <div class="form-group">
-                    <label for="exampleInputFile">Rasmi</label>
-                    <div class="input-group">
-                        <div class="custom-file">
-                            <input type="file" accept="image/*" class="custom-file-input" name="image_url"
-                                   id="exampleInputFile" required>
-                            <label class="custom-file-label" for="exampleInputFile">Rasmni tanlang</label>
-                        </div>
-                    </div>
+                    <textarea class="form-control" rows="3" name='content' placeholder="Matn ..." required></textarea>
                 </div>
             </div>
             <!-- /.card-body -->
-
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Qo'shish</button>
             </div>
         </form>
     </div>
     <!-- /.card -->
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')
