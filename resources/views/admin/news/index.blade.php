@@ -40,7 +40,7 @@
                             <div class="btn-group mr-2">
 
                                 <a href="{{route('admin.news.edit', ['news' => $item->id])}}" type="button"
-                                   class="btn btn-outline-warning btn-lg" data-toggle="tooltip"
+                                   class="btn btn-outline-warning btn-sm" data-toggle="tooltip"
                                    title="Yangilikni tahrirlash"><i class="fa fa-edit"></i>
                                 </a>
                                 <x-destroy-button message="Yangilik o'chirish"

@@ -37,10 +37,10 @@
                         <td>
                             <div class="btn-group mr-2">
                                 <a href="{{route('admin.post.index', ['category' => $category->id])}}" type="button"
-                                   class="btn btn-outline-secondary btn-lg"><i class="fa fa-eye"></i>
+                                   class="btn btn-outline-secondary btn-sm"><i class="fa fa-eye"></i>
                                 </a>
                                 <a href="{{route('admin.category.edit', ['category' => $category->id])}}" type="button"
-                                   class="btn btn-outline-warning btn-lg" data-toggle="tooltip"
+                                   class="btn btn-outline-warning btn-sm" data-toggle="tooltip"
                                    title="kategoryani taxrirlash"><i class="fa fa-edit"></i>
                                 </a>
                                 <x-destroy-button message="Kategoryani o'chirish"
@@ -61,37 +61,3 @@
 
 @stop
 
-@section('css')
-    <link rel="stylesheet" href="/vendor/css/admin_custom.css">
-
-@stop
-
-@section('js')
-    <script>
-        $(function () {
-            $("#example1").DataTable({
-                "responsive": true,
-                "autoWidth": false,
-            });
-            $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "responsive": true,
-            });
-        });
-
-
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $("#myTooltips a").tooltip({
-                title: "This will show in absence of title attribute."
-            });
-        });
-    </script>
-@stop

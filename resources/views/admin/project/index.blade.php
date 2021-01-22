@@ -47,10 +47,10 @@
                             </a>
                         </td>
                         <td>
-                            {{$project->start_date}}
+                            {{$project->start_date->format('d.m.Y')}}
                         </td>
                         <td>
-                            {{$project->end_date}}
+                            {{$project->end_date->format('d.m.Y')}}
                         </td>
                         @if($project->hidden)
                             <td style="background-color: #00b44e">
@@ -65,7 +65,7 @@
                         <td>
                             <div class="btn-group mr-2">
                                 <a href="{{route('admin.project.edit', ['project' => $project->id])}}" type="button"
-                                   class="btn btn-outline-warning btn-lg" data-toggle="tooltip"
+                                   class="btn btn-outline-warning btn-sm" data-toggle="tooltip"
                                    title="proektni taxrirlash"><i class="fa fa-edit"></i>
                                 </a>
                                 <x-destroy-button message="proektni o'chirish"

@@ -52,7 +52,7 @@
                             <div class="btn-group mr-2">
 
                                 <a href="{{route('admin.employer.edit', ['employer' => $employer->id])}}" type="button"
-                                   class="btn btn-outline-warning btn-lg" data-toggle="tooltip"
+                                   class="btn btn-outline-warning btn-sm" data-toggle="tooltip"
                                    title="Xodim ma'lumotlarini tahrirlash"><i class="fa fa-edit"></i>
                                 </a>
                                 <x-destroy-button message="Xodimni o'chirish"
