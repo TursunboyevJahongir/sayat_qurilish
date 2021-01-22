@@ -264,7 +264,7 @@ return [
             'label_color' => 'success',
         ],
         [
-            'text' => 'slayd rasm',
+            'text' => 'Slayd rasm',
             'url'  => 'admin/slides',
             'icon' => 'fas fa-images',
             'label_color' => 'success',
