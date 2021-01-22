@@ -17,7 +17,7 @@
     </header>
     <section class="content-section">
         <div class="container">
-            {{$data->about ?? "Ma'lumot yo'q"}}
+            {!! $data->about ?? "Ma'lumot yo'q" !!}
         </div>
         <ul>
 

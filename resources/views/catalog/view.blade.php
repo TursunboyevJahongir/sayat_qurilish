@@ -21,7 +21,7 @@
             <div class="text-center mb-3">
                 <img src="{{$item->image}}" alt="Image">
             </div>
-            {{$item->description}}
+            {!! $item->descriptsion !!}
         </div>
         <ul>
 

@@ -21,7 +21,7 @@
             <div class="text-center mb-3">
                 <img src="{{$news->image}}" alt="Image">
             </div>
-            {{$news->content}}
+            {!! $news->content !!}
         </div>
         <ul>
 

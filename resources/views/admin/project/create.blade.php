@@ -1,6 +1,7 @@
 {{-- resources/views/admin/dashboard.blade.php --}}
-
 @extends('adminlte::page')
+
+
 
 @section('title', $title)
 
@@ -42,9 +43,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Matni</label>
-                    <textarea class="form-control" rows="3" name='description'
-                              placeholder="Matn ..." required></textarea>
+                    <x-summernote id="desc" name="description"></x-summernote>
                 </div>
 
                 <div class="form-group">
@@ -90,6 +89,4 @@
     <!-- /.card -->
 @stop
 
-@section('js')
-    <script> console.log('Hi!'); </script>
-@stop
+

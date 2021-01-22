@@ -38,8 +38,7 @@
                 </div>
                 <!-- textarea -->
                 <div class="form-group">
-                    <label>Matni</label>
-                    <textarea class="form-control" rows="3" name='content' placeholder="Matn ..." required></textarea>
+                    <x-summernote id="desc" name="content"></x-summernote>
                 </div>
             </div>
             <!-- /.card-body -->

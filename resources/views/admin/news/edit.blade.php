@@ -40,8 +40,7 @@
                 </div>
                 <!-- textarea -->
                 <div class="form-group">
-                    <label for="text">Matni</label>
-                    <textarea id="text" class="form-control" rows="3" name='content' placeholder="Matn ..." required>value={{$news->contenet}}</textarea>
+                    <x-summernote id="desc" name="content" :text="$news->content"></x-summernote>
                 </div>
             </div>
             <div class="card-footer">

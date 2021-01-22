@@ -5,12 +5,14 @@ namespace App\Http\Controllers\Admin;
 
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ImageUploadRequest;
 use App\Models\Category;
 use App\Models\Employer;
 use App\Models\Message;
 use App\Models\News;
 use App\Models\Projects;
 use App\Models\Slideshow;
+use Intervention\Image\Facades\Image;
 
 class DashboardController extends Controller
 {
@@ -25,5 +27,13 @@ class DashboardController extends Controller
         $employers= Employer::query()->orderBy('created_at', 'desc')->limit(8)->get();
         return view('admin.dashboard',
             compact('category_count', 'project_count', 'news_count', 'slide_count', 'slides', 'messages','employers'));
+    }
+
+    public function imageUpload(ImageUploadRequest $request)
+    {
+        $filename = md5(microtime(true)) . '.' . $request->image->getClientOriginalExtension();
+        $request->image->storeAs('', $filename);
+        Image::make('uploads/' . $filename)->fit(640,480)->save();
+        return $filename;
     }
 }

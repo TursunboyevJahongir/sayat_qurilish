@@ -35,8 +35,7 @@
                 </div>
                 <!-- textarea -->
                 <div class="form-group">
-                    <label>Matni</label>
-                    <textarea class="form-control" rows="3" name='description' placeholder="Matn ..." required></textarea>
+                    <x-summernote id="desc" name="description"></x-summernote>
                 </div>
             </div>
 

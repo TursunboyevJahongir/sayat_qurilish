@@ -21,7 +21,7 @@
             <div class="text-center mb-3">
                 <img src="{{$project->image}}" alt="Image">
             </div>
-            {{$project->description}}
+            {!! $project->description !!}
         </div>
         <ul>
 
