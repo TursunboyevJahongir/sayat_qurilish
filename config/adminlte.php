@@ -237,6 +237,14 @@ return [
 //            'label'       => \App\Models\Category::,
             'label_color' => 'success',
         ],
+        ['header' => 'Admin profil'],
+        [
+            'text' => "Login parol",
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-user-cog',
+//            'label'       => \App\Models\Category::,
+            'label_color' => 'success',
+        ],
         ['header' => ''],
         [
             'text' => 'Kategoryalar',

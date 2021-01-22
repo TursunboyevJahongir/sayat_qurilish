@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EmployerController;
@@ -30,6 +31,9 @@ Route::get('dash/admin/login', [LoginController::class, 'index'])->name('login')
 Route::post('dash/admin/login', [LoginController::class, 'index'])->name('login');
 
 Route::middleware('auth:web')->prefix('admin')->group(function () {
+    Route::get('/settings', [AdminController::class, 'confirm'])->name('admin.confirm');
+    Route::post('/settings', [AdminController::class, 'confirm'])->name('admin.confirm');
+    Route::post('/settings/update', [AdminController::class, 'update'])->name('admin.update');
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::post('/upl', [DashboardController::class, 'imageUpload'])->name('dashboard.upl');
     Route::post('logout',[LoginController::class, 'logout'])->name('logout');

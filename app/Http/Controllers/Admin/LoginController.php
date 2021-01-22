@@ -30,7 +30,7 @@ class LoginController extends Controller
             return redirect('/admin');
         }
 
-        return redirect(route('admin.login'))->withErrors([
+        return redirect(route('login'))->withErrors([
             'login' => __('auth.failed')
         ]);
     }
@@ -39,7 +39,7 @@ class LoginController extends Controller
     {
         Session::flush();
         Auth::logout();
-        return Redirect(route('admin.home'));
+        return Redirect('/');
     }
 
 }
