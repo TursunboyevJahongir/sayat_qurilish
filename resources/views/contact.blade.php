@@ -49,15 +49,15 @@
                     <!-- end section-title -->
                 </div>
                 <!-- end col-6 -->
-                <div class="col-lg-6">
+                <div class="col-lg-6" id="fm">
                     <form class="contact-form" method="POST" action="{{route('home.contacts.form')}}"
                           style="margin-bottom: 0">
                         @csrf
                         @if($errors->count() > 0)
                             <div class="alert alert-danger">{{$errors->first()}}</div>
                         @endif
-                        @if(isset($message))
-                            <div class="alert alert-success">{{$message}}</div>
+                        @if(session()->get('message'))
+                            <div class="alert alert-success">{{session()->get('message')}}</div>
                         @endif
                         <div class="form-group">
                             <span>Ism va familya</span>

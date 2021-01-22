@@ -43,7 +43,7 @@ class HomeController extends Controller
                 'message' => $request->input('message')
             ]);
             $message->save();
-            return redirect(route('home.contacts'))->with(['message' => 'Xabar yuborildi!']);
+            return redirect('/contacts#fm')->with(['message' => 'Xabar yuborildi!']);
         }
         return view('contact');
     }

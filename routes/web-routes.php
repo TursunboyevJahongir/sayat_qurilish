@@ -1,7 +1,7 @@
 <?php
 Route::get('about', [\App\Http\Controllers\HomeController::class, 'about'])->name('home.about');
 Route::get('contacts', [\App\Http\Controllers\HomeController::class, 'contacts'])->name('home.contacts');
-Route::post('contacts', [\App\Http\Controllers\HomeController::class, 'contacts'])->name('home.contacts.form');
+Route::post('contacts', [\App\Http\Controllers\HomeController::class, 'contacts'])->name('home.contacts.form')->middleware('throttle:contacts');
 Route::get('projects', [\App\Http\Controllers\ProjectsController::class, 'index'])->name('project.index');
 Route::get('projects/{id}', [\App\Http\Controllers\ProjectsController::class, 'view'])->name('project.view');
 

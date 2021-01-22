@@ -34,6 +34,9 @@ Route::middleware('auth:web')->prefix('admin')->group(function () {
     Route::post('/upl', [DashboardController::class, 'imageUpload'])->name('dashboard.upl');
     Route::post('logout',[LoginController::class, 'logout'])->name('logout');
 
+    Route::get('data',[\App\Http\Controllers\Admin\DataController::class, 'index'])->name('admin.data');
+    Route::post('data',[\App\Http\Controllers\Admin\DataController::class, 'index'])->name('admin.data.update');
+
     //category
     Route::get('categories', [CategoryController::class, 'index'])->name('admin.category.index');
     Route::get('category/create', [CategoryController::class, 'form'])->name('admin.category.form');
