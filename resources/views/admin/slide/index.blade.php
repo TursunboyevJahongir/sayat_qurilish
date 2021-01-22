@@ -20,7 +20,7 @@
                 <a href="{{route('admin.slide.edit', ['slide' => $slide->id])}}">
                     <div class="card card-widget widget-user cardShadow">
                         <div class="widget-user-header text-white"
-                             style="background: url('{{url($slide->image_url)}}') center center;">
+                             style="background: url('{{url($slide->image)}}') center center;">
                             <h3 class="widget-user-username text-right">{{$slide->short_title}}</h3>
                             <h5 class="widget-user-desc text-right">{{$slide->short_title}}</h5>
                         </div>

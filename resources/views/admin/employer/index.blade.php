@@ -35,7 +35,7 @@
                         <td>
                             <div class="product-image-thumb active">
                                 <a href="{{route('admin.employer.edit', ['employer' => $employer->id])}}">
-                                    <img src="{{'/uploads/'.$employer->image_url}}"
+                                    <img src="{{$employer->image}}"
                                          alt="Product Image">
                                 </a>
                             </div>

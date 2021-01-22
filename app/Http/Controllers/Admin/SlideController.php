@@ -45,7 +45,7 @@ class SlideController extends Controller
     public function update(SlideUpdateRequest $request, Slideshow $slide)
     {
         if ($request->file('image_url')) {
-            @unlink('uploads/' . $slide->image_url);
+            @unlink(public_path().'/uploads/' . $slide->image_url);
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $slide->image_url = $filename;
@@ -63,7 +63,7 @@ class SlideController extends Controller
      */
     public function destroy(Slideshow $slide): \Illuminate\Http\RedirectResponse
     {
-        @unlink('uploads/' . $slide->image_url);
+        @unlink(public_path().'/uploads/' . $slide->image_url);
         $slide->delete();
         return redirect()->back();
     }

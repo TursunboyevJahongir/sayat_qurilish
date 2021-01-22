@@ -47,6 +47,7 @@ class ProjectController extends Controller
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $project['image_url'] = $filename;
+            Image::make('uploads/' . $project['image_url'])->fit(1000, 600)->save();
         }
         $project['hidden'] = $request->hidden == 'on';
         Projects::create($project);
@@ -75,13 +76,13 @@ class ProjectController extends Controller
     public function update(ProjectUpdateRequest $request, Projects $project)
     {
         if ($request->file('image_url')) {
-            @unlink('uploads/' . $project->image_url);
+            @unlink(public_path().'/uploads/' . $project->image_url);
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $project->image_url = $filename;
             Image::make('uploads/' . $project->image_url)->fit(1000, 600)->save();
         }
-        $project->hidden = $request->hidden == 'on';
+        $project->hidden = $request->hidden === 'on';
         $project->fill($request->except(['image_url', 'hidden']))->update();
         return redirect(route('admin.project.index'));
     }
@@ -94,7 +95,7 @@ class ProjectController extends Controller
      */
     public function destroy(Projects $project): \Illuminate\Http\RedirectResponse
     {
-        @unlink('uploads/' . $project->image_url);
+        @unlink(public_path().'/uploads/' . $project->image_url);
         $project->delete();
         return redirect()->back();
     }

@@ -48,7 +48,7 @@ class PostController extends Controller
     public function update(PostUpdateRequest $request, Posts $post)
     {
         if ($request->file('image_url')) {
-            @unlink('uploads/' . $post->image_url);
+            @unlink(public_path().'uploads/' . $post->image_url);
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $post->image_url = $filename;
@@ -61,6 +61,7 @@ class PostController extends Controller
 
     public function destroy(Posts $post): \Illuminate\Http\RedirectResponse
     {
+        @unlink(public_path().'uploads/' . $post->image_url);
         $post->delete();
         return redirect()->back();
     }
