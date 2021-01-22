@@ -22,7 +22,7 @@
                 <tr>
                     <th>#</th>
                     <th></th>
-                    <th>Mavzusi</th>
+                    <th>Sarlavha</th>
                     <th>Matni</th>
                     <th></th>
                 </tr>

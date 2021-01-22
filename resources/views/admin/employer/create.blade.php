@@ -30,12 +30,12 @@
             @endif
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Xodim ismi va famlyasi</label>
-                    <input type="text" class="form-control" name="full_name" placeholder="Ism Familya" required>
+                    <label for="exampleInputEmail1">Ismi va familyasi</label>
+                    <input type="text" class="form-control" name="full_name" placeholder="Ismi va Familyasi" required>
                 </div>
                 <!-- textarea -->
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Xodim Mansabi</label>
+                    <label for="exampleInputEmail1">Mansabi</label>
                     <input type="text" class="form-control" name="role" placeholder="Mansabi" required>
                 </div>
             </div>
@@ -59,8 +59,4 @@
         </form>
     </div>
     <!-- /.card -->
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
 @stop

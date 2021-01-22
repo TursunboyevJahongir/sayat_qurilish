@@ -33,8 +33,8 @@
                     <input type="file" class="form-control" name="image_url" placeholder="Rasm" required>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Mavzusi</label>
-                    <input type="text" class="form-control" name="title" placeholder="Mavzu" required>
+                    <label for="exampleInputEmail1">Sarlavha</label>
+                    <input type="text" class="form-control" name="title" placeholder="Sarlavha" required>
                 </div>
                 <!-- textarea -->
                 <div class="form-group">
@@ -48,8 +48,4 @@
         </form>
     </div>
     <!-- /.card -->
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
 @stop

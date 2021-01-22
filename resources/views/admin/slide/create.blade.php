@@ -12,7 +12,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Xodim qo'shish</h3>
+            <h3 class="card-title">Slayd qo'shish</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -30,8 +30,8 @@
             @endif
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Matni</label>
-                    <input type="text" class="form-control" name="title" placeholder="Matni.." required>
+                    <label for="exampleInputEmail1">Sarlavha</label>
+                    <input type="text" class="form-control" name="title" placeholder="Sarlavha.." required>
                 </div>
                 <!-- textarea -->
             </div>

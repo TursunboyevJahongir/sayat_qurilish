@@ -33,7 +33,7 @@ class NewsController extends Controller
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $news->image_url = $filename;
-            Image::make('uploads/' . $news->image_url)->fit(480,640)->save();
+//            Image::make('uploads/' . $news->image_url)->fit(480,640)->save()->destroy();
         }
 
         $news->fill($request->except('image_url'))->save();
@@ -53,7 +53,7 @@ class NewsController extends Controller
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $news->image_url = $filename;
-            Image::make('uploads/' . $news->image_url)->fit(480,640)->save();
+//            Image::make('uploads/' . $news->image_url)->fit(480,640)->save()->destroy();
         }
         $news->fill($request->except('image_url'))->update();
         return redirect(route('admin.news.index'));

@@ -3,11 +3,6 @@
 @extends('adminlte::page')
 
 @section('title', $title)
-
-@section('content_header')
-    <h1>{{$category->short_title}} kategoryaga </h1>
-@stop
-
 @section('content')
     <!-- general form elements -->
     <div class="card card-primary">
@@ -30,8 +25,8 @@
             @endif
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Mavzusi</label>
-                    <input type="text" class="form-control" name="title" placeholder="Mavzu" required>
+                    <label for="exampleInputEmail1">Sarlavha</label>
+                    <input type="text" class="form-control" name="title" placeholder="Sarlavha" required>
                 </div>
                 <!-- textarea -->
                 <div class="form-group">
@@ -59,12 +54,4 @@
         </form>
     </div>
     <!-- /.card -->
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
 @stop

@@ -12,7 +12,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Slidni tahrirlash</h3>
+            <h3 class="card-title">Slaydni tahrirlash</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -31,8 +31,8 @@
             @endif
             <div class="card-body" style="background: url('{{url('uploads/'.$slide->image_url)}}') center center;">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Matni</label>
-                    <input type="text" class="form-control" name="title" value="{{$slide->title}}" placeholder="Matni.."
+                    <label for="exampleInputEmail1">Sarlavha</label>
+                    <input type="text" class="form-control" name="title" value="{{$slide->title}}" placeholder="Sarlavha.."
                            required>
                 </div>
                 <div class="card-body">

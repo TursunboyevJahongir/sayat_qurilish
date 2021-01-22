@@ -33,7 +33,7 @@ class DashboardController extends Controller
     {
         $filename = md5(microtime(true)) . '.' . $request->image->getClientOriginalExtension();
         $request->image->storeAs('', $filename);
-        Image::make('uploads/' . $filename)->fit(640,480)->save();
+//        Image::make('uploads/' . $filename)->fit(640,480)->save()->destroy();
         return $filename;
     }
 }

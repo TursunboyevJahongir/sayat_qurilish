@@ -31,7 +31,7 @@ class SlideController extends Controller
         $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
         $request->image_url->storeAs('', $filename);
         $slide['image_url'] = $filename;
-        Image::make('uploads/' . $slide['image_url'])->fit(1000, 600)->save();
+//        Image::make('uploads/' . $slide['image_url'])->fit(800, 600)->save()->destroy();
         Slideshow::create($slide);
         return redirect(route('admin.slide.index'));
     }
@@ -49,7 +49,7 @@ class SlideController extends Controller
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $slide->image_url = $filename;
-            Image::make('uploads/' . $slide->image_url)->fit(1000, 600)->save();
+//            Image::make('uploads/' . $slide->image_url)->fit(800, 600)->save()->destroy();
         }
         $slide->fill($request->except(['image_url']))->update();
         return redirect(route('admin.slide.index'));

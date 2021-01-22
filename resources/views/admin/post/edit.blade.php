@@ -31,8 +31,8 @@
             @endif
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Mavzusi </label>
-                    <input type="text" class="form-control" name="title" value="{{$post->title}}" placeholder="Mavzu" required>
+                    <label for="exampleInputEmail1">Sarlavha </label>
+                    <input type="text" class="form-control" name="title" value="{{$post->title}}" placeholder="Sarlavha" required>
                 </div>
                 <!-- textarea -->
                 <div class="form-group">

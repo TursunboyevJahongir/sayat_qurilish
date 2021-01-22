@@ -32,7 +32,7 @@ class PostController extends Controller
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $post['image_url'] = $filename;
-            Image::make('uploads/' . $post['image_url'])->fit(1000, 600)->save();
+//            Image::make('uploads/' . $post['image_url'])->fit(1000, 600)->save()->destroy();
         }
         $post['category_id'] = $categoryId;
         Posts::create($post);
@@ -52,7 +52,7 @@ class PostController extends Controller
             $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
             $request->image_url->storeAs('', $filename);
             $post->image_url = $filename;
-            Image::make('uploads/' . $post->image_url)->fit(1000, 600)->save();
+//            Image::make('uploads/' . $post->image_url)->fit(1000, 600)->save()->destroy();
         }
         $post->fill($request->except(['image_url', 'hidden']))->update();
         return redirect(route('admin.post.index', ['category' => $post->category_id]));

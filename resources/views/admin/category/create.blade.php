@@ -20,8 +20,8 @@
             @csrf
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Kategorya nomi</label>
-                    <input type="text" class="form-control" name="title" placeholder="kategorya nomi" required>
+                    <label for="exampleInputEmail1">Kategoriya nomi</label>
+                    <input type="text" class="form-control" name="title" placeholder="Kategoriya nomi" required>
                 </div>
                 @if (count($errors) > 0)
                     <div class="alert alert-danger">
@@ -29,7 +29,7 @@
                             @foreach ($errors->all() as $error)
                                 @if($error == "The title has already been taken.")
                                     <div class="alert alert-danger" role="alert">
-                                        Bunday nomdagi Kategorya mavjud
+                                        Bunday nomdagi Kategoriya mavjud
                                     </div>
                                 @else
                                     <div class="alert alert-danger" role="alert">
@@ -50,10 +50,3 @@
     <!-- /.card -->
 @stop
 
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
-@stop

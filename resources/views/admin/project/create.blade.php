@@ -31,8 +31,8 @@
             @endif
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Proekt nomi </label>
-                    <input type="text" class="form-control" name="title" placeholder="Kategorya nomi"
+                    <label for="exampleInputEmail1">Proyekt nomi </label>
+                    <input type="text" class="form-control" name="title" placeholder="Proyekt nomi"
                            required>
                 </div>
 

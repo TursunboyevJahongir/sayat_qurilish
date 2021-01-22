@@ -21,8 +21,8 @@
             @method('PUT')
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Kategorya nomi </label>
-                    <input type="text" class="form-control" name="title" placeholder="Kategorya nomi"
+                    <label for="exampleInputEmail1">Kategoriya nomi </label>
+                    <input type="text" class="form-control" name="title" placeholder="Kategoriya nomi"
                            value="{{$category->title}}" required>
                 </div>
             </div>
@@ -34,12 +34,4 @@
         </form>
     </div>
     <!-- /.card -->
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
 @stop

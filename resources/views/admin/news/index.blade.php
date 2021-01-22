@@ -22,7 +22,7 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Mavzu</th>
+                    <th>Sarlavha</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -60,32 +60,3 @@
 
 @stop
 
-@section('js')
-    <script>
-        $(function () {
-            $("#example1").DataTable({
-                "responsive": true,
-                "autoWidth": false,
-            });
-            $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "responsive": true,
-            });
-        });
-
-
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $("#myTooltips a").tooltip({
-                title: "This will show in absence of title attribute."
-            });
-        });
-    </script>
-@stop

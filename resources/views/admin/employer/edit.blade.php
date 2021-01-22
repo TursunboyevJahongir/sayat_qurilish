@@ -31,13 +31,13 @@
             @endif
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Xodim ismi va famlyasi</label>
+                    <label for="exampleInputEmail1">Ismi va familyasi</label>
                     <input type="text" class="form-control" name="full_name" value="{{$employer->full_name}}"
-                           placeholder="Ism Familya" required>
+                           placeholder="Ism va Familyasi" required>
                 </div>
                 <!-- textarea -->
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Xodim Mansabi</label>
+                    <label for="exampleInputEmail1">Mansabi</label>
                     <input type="text" class="form-control" name="role" value="{{$employer->role}}"
                            placeholder="Mansabi" required>
                 </div>
@@ -67,12 +67,4 @@
         </form>
     </div>
     <!-- /.card -->
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
 @stop

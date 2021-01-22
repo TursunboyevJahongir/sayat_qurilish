@@ -12,7 +12,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Xodim haqqidagi malumotlarni tahrirlash</h3>
+            <h3 class="card-title">Yangilikni tahrirlash</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -35,8 +35,8 @@
                     <input type="file" id="file" class="form-control" name="image_url" placeholder="Rasm">
                 </div>
                 <div class="form-group">
-                    <label for="title">Mavzusi</label>
-                    <input type="text" id="title" class="form-control" name="title" value="{{$news->title}}" placeholder="Mavzu" required>
+                    <label for="title">Sarlavha</label>
+                    <input type="text" id="title" class="form-control" name="title" value="{{$news->title}}" placeholder="Sarlavha" required>
                 </div>
                 <!-- textarea -->
                 <div class="form-group">
@@ -49,12 +49,4 @@
         </form>
     </div>
     <!-- /.card -->
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
 @stop
