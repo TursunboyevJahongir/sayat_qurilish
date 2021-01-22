@@ -18,7 +18,7 @@
                 <div class="card-tools">
                     <div class="input-group input-group-sm">
                         <form class="input-group row " method="get">
-                            <input type="text" class="form-control" name="search" placeholder="Qidirish[tel,sms,ism]">
+                            <input type="text" class="form-control" value="{{request()->input('search')}}" name="search" placeholder="Qidirish[tel,sms,ism]">
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fas fa-search"></i>

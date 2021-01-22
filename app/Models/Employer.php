@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Traits\HasImageTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,7 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Employer extends Model
 {
-    use HasFactory;
+    use HasFactory, HasImageTrait;
 
     protected $fillable = [
         'full_name',

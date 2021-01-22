@@ -16,7 +16,7 @@ class NewsController extends Controller
     public function index(Request $request)
     {
         $title = 'Yangiliklar';
-        $news = News::paginate(10);
+        $news = News::query()->latest()->paginate(10);
         return view('admin.news.index', compact('news', 'title'));
     }
 
@@ -28,7 +28,14 @@ class NewsController extends Controller
 
     public function create(NewsRequest $request)
     {
-        News::create($request->validated());
+        $news = new News();
+        if ($request->file('image_url')) {
+            $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
+            $request->image_url->storeAs('', $filename);
+            $news->image_url = $filename;
+        }
+
+        $news->fill($request->except('image_url'))->save();
         return redirect(route('admin.news.index'));
     }
 
@@ -40,7 +47,13 @@ class NewsController extends Controller
 
     public function update(NewsUpdateRequest $request, News $news)
     {
-        $news->update($request->validated());
+        if ($request->file('image_url')) {
+            @unlink(public_path().'/uploads/'.$news->image_url);
+            $filename = md5(microtime(true)) . '.' . $request->image_url->getClientOriginalExtension();
+            $request->image_url->storeAs('', $filename);
+            $news->image_url = $filename;
+        }
+        $news->fill($request->except('image_url'))->update();
         return redirect(route('admin.news.index'));
     }
 

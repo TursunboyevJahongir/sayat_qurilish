@@ -16,7 +16,7 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="{{ route('admin.news.create') }}" method="post">
+        <form role="form" action="{{ route('admin.news.create') }}" method="post" enctype="multipart/form-data">
             @csrf
             @if (count($errors) > 0)
                 <div class="alert alert-danger">
@@ -28,6 +28,10 @@
                 </div>
             @endif
             <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Asosiy rasm</label>
+                    <input type="file" class="form-control" name="image_url" placeholder="Rasm" required>
+                </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Mavzusi</label>
                     <input type="text" class="form-control" name="title" placeholder="Mavzu" required>

@@ -3,7 +3,13 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\UploadedFile;
 
+/**
+ * Class NewsUpdateRequest
+ * @package App\Http\Requests
+ * @property UploadedFile $image_url
+ */
 class NewsUpdateRequest extends FormRequest
 {
     /**
@@ -26,6 +32,7 @@ class NewsUpdateRequest extends FormRequest
         return [
             'title' => 'required|string',
             'content' => 'required|string',
+            'image_url' => 'nullable|image',
         ];
     }
 }

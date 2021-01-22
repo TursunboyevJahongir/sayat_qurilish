@@ -31,13 +31,17 @@
             @endif
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Mavzusi</label>
-                    <input type="text" class="form-control" name="title" value="{{$news->title}}" placeholder="Mavzu" required>
+                    <label for="file">Asosiy rasm (majburiy emas)</label>
+                    <input type="file" id="file" class="form-control" name="image_url" placeholder="Rasm">
+                </div>
+                <div class="form-group">
+                    <label for="title">Mavzusi</label>
+                    <input type="text" id="title" class="form-control" name="title" value="{{$news->title}}" placeholder="Mavzu" required>
                 </div>
                 <!-- textarea -->
                 <div class="form-group">
-                    <label>Matni</label>
-                    <textarea class="form-control" rows="3" name='content' placeholder="Matn ..." required>value={{$news->contenet}}</textarea>
+                    <label for="text">Matni</label>
+                    <textarea id="text" class="form-control" rows="3" name='content' placeholder="Matn ..." required>value={{$news->contenet}}</textarea>
                 </div>
             </div>
             <div class="card-footer">

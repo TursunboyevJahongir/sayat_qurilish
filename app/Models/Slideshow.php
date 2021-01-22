@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Traits\HasImageTrait;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -18,7 +19,7 @@ use Illuminate\Support\Str;
  */
 class Slideshow extends Model
 {
-    use HasFactory;
+    use HasFactory, HasImageTrait;
     protected $fillable = [
         'title',
         'image_url',

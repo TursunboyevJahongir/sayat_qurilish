@@ -26,7 +26,7 @@
                 @foreach($news as $new)
                     <div class="col-lg-4 mb-2">
                         <div class="recent-news">
-                            <figure> <img class="img-fluid" src="{{$new->image_url}}" alt="Image"> </figure>
+                            <figure> <img class="img-fluid" src="{{$new->image}}" alt="Image"> </figure>
                             <div class="content"> <small>{{$new->created_at->format('d.m.Y')}}</small>
                                 <h3><a href="{{route('news.view', ['id' => $new->id])}}">{{\Illuminate\Support\Str::limit($new->title, 16, '...')}}</a></h3>
                                 <!-- end author -->

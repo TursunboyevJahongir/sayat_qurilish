@@ -19,7 +19,7 @@
     <section class="content-section">
         <div class="container">
             <div class="text-center mb-3">
-                <img src="{{$item->image_url}}" alt="Image">
+                <img src="{{$item->image}}" alt="Image">
             </div>
             {{$item->description}}
         </div>

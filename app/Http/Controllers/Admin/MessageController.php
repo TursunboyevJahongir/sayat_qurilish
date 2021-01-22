@@ -22,13 +22,13 @@ class MessageController extends Controller
      */
     public function index(Request $request)
     {
-        $messages = Message::query()->orderBy('created_at','desc')->paginate(10);
+        $messages = Message::query()->latest()->paginate(10);
         if ($request->search) {
-            $messages = Message::where(function ($query) use ($request) {
+            $messages = Message::query()->where(function ($query) use ($request) {
                 $query->where('full_name', 'like', '%' . $request->search . '%')
-                    ->OrWhere('title', 'like', '%' . $request->search . '%')
-                    ->OrWhere('message', 'like', '%' . $request->search . '%')
-                    ->OrWhere('phone', 'like', '%' . $request->search . '%');
+                    ->orWhere('title', 'like', '%' . $request->search . '%')
+                    ->orWhere('message', 'like', '%' . $request->search . '%')
+                    ->orWhere('phone', 'like', '%' . $request->search . '%');
             })
                 ->paginate(10);
         }

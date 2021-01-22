@@ -35,7 +35,7 @@
                 <div class="swiper-wrapper">
                     @foreach($slides  as $slide)
                         <div class="swiper-slide">
-                            <div class="slide-image" data-background="{{$slide->image_url}}"></div>
+                            <div class="slide-image" data-background="{{$slide->image}}"></div>
                         </div>
                     @endforeach
                 </div>
@@ -73,7 +73,7 @@
                 @foreach($projects as $project)
                     <div class="swiper-slide">
                         <figure class="project-box"><a href="{{route('project.view', ['id' => $project->id])}}"><img
-                                    src="{{$project->image_url ?? asset('images/slide03.jpg')}}" alt="Image"></a>
+                                    src="{{$project->image ?? asset('images/slide03.jpg')}}" alt="Image"></a>
                             <figcaption>
                                 <a href="{{route('project.view', ['id' => $project->id])}}"><h5>{{$project->title}}</h5>
                                 </a>
@@ -209,7 +209,7 @@
                 @foreach($workers as $worker)
                     <div class="col">
                         <div class="sales-team">
-                            <figure><img src="{{$worker->image_url}}" alt="Image"></figure>
+                            <figure><img src="{{$worker->image}}" alt="Image"></figure>
                             <div class="infos">
                                 <h6>{{$worker->full_name}}</h6>
                                 <small>{{$worker->role}}</small>
@@ -246,7 +246,7 @@
                     @foreach($news as $new)
                         @if($loop->index === 0)
                             <div class="recent-news">
-                                <figure><img src="{{$new->image_url}}" alt="Image"></figure>
+                                <figure><img src="{{$new->image}}" alt="Image"></figure>
                                 <div class="content"><small>{{$new->created_at}}</small>
                                     <h3>
                                         <a href="{{route('news.view', ['id' => $new->id])}}">{{\Illuminate\Support\Str::limit($new->title, 27, '...')}}</a>
@@ -266,7 +266,7 @@
                             @if($loop->index !== 0)
                                 <div class="col-md-6">
                                     <div class="recent-news">
-                                        <figure><img src="{{$new->image_url}}" alt="Image"></figure>
+                                        <figure><img src="{{$new->image}}" alt="Image"></figure>
                                         <div class="content"><small>{{$new->created_at}}</small>
                                             <h3>
                                                 <a href="{{route('news.view', ['id' => $new->id])}}">{{\Illuminate\Support\Str::limit($new->title, 16, '...')}}</a>

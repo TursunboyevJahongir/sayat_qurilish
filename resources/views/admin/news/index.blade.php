@@ -21,7 +21,7 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>#</th>
+                    <th>ID</th>
                     <th>Mavzu</th>
                     <th></th>
                 </tr>
@@ -29,7 +29,7 @@
                 <tbody>
                 <tr>
                     @foreach($news as $num => $item)
-                        <td>{{$num+1}}</td>
+                        <td>{{$item->id}}</td>
                         <td>
                             <a href="{{route('admin.news.edit', ['news' => $item->id])}}"
                                data-toggle="tooltip"

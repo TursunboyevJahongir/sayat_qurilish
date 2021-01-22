@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Traits\HasImageTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
@@ -24,7 +25,7 @@ use Illuminate\Support\Str;
  */
 class Projects extends Model
 {
-    use HasFactory;
+    use HasFactory, HasImageTrait;
 
     protected $fillable = [
         'title',
