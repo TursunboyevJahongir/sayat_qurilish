@@ -24,7 +24,7 @@ class ProjectController extends Controller
     public function index()
     {
         $title = 'Proektlar';
-        $projects = Projects::query()->paginate(10);
+        $projects = Projects::query()->latest()->paginate(10);
         return view('admin.project.index', compact('projects', 'title'));
     }
 

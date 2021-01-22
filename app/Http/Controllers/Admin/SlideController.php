@@ -16,7 +16,7 @@ class SlideController extends Controller
     public function index(Request $request)
     {
         $title = 'Slaydlar';
-        $slides = Slideshow::query()->paginate(9);
+        $slides = Slideshow::query()->latest()->paginate(9);
         return view('admin.slide.index', compact('slides', 'title'));
     }
     public function form()
