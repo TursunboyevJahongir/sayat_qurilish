@@ -65,7 +65,7 @@ class EmployerController extends Controller
      */
     public function destroy(Employer $employer): \Illuminate\Http\RedirectResponse
     {
-        @unlink('uploads/' . $employer->image_url);
+        @unlink(public_path().'/uploads/' . $employer->image_url);
         $employer->delete();
         return redirect()->back();
     }
