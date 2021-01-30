@@ -22,14 +22,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         User::factory()->create();
-//         Projects::factory(10)->create();
-//         Category::factory(10)->create();
-//         Posts::factory(10)->create();
-//         News::factory(10)->create();
-//         Message::factory(10)->create();
-//         Slideshow::factory(10)->create();
-//         Employer::factory(10)->create();
-//         Data::factory(10)->create();
+//         User::factory()->create();
+         Projects::factory(10)->create();
+         Category::factory(10)->create();
+         Posts::factory(10)->create();
+         News::factory(10)->create();
+         Message::factory(10)->create();
+         Slideshow::factory(10)->create();
+         Employer::factory(10)->create();
+         Data::factory(10)->create();
     }
 }

@@ -16,7 +16,8 @@
                     <div class="contact-box">
                         <figure><img src="/images/icon-global.png" alt="Image"></figure>
                         <h6>Bosh ofis</h6>
-                        <p>Xorazm viloyati, Xiva tumani, Sayot</p>
+                        <p>Xorazm viloyati
+                            Urganch shahar, Xonqa ko'chasi, 138-uy</p>
 
                     </div>
                     <!-- end contact-box -->

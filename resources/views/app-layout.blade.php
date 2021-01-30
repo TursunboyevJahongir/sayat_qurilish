@@ -62,9 +62,8 @@
         <div class="hide-mobile">
             <h6 class="widget-title">MANZIL</h6>
             <address class="address">
-                <p>Xorazm viloyati
-                    Xiva tumani, Sayot</p>
-                <p>+99890 111 22 33</p>
+                <p>Xorazm viloyati, Urganch shahar, Xonqa ko'chasi, 138-uy</p>
+                <p>+99862-225-62-63</p>
             </address>
         </div>
         <!-- end hide-mobile -->
@@ -139,7 +138,7 @@
                 <h6 class="widget-title">BOSH OFIS</h6>
                 <address>
                     <p>Xorazm viloyati<br>
-                        Xiva tumani, Sayot</p>
+                       Urganch shahar, Xonqa ko'chasi, 138-uy</p>
                     <p>+99862-225-62-63</p>
                 </address>
             </div>

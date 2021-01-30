@@ -27,7 +27,7 @@
                     <div class="col-lg-4 mb-2">
                         <div class="recent-news">
                             <figure> <img class="img-fluid" src="{{$project->image}}" alt="Image"> </figure>
-                            <div class="content"> <small>{{$project->created_at->format('d.m.Y')}}</small>
+                            <div class="content"> <small>{{$project->start_date->format('d.m.Y')}} -  {{$project->end_date->format('d.m.Y')}}</small>
                                 <h3><a href="{{route('project.view', ['id' => $project->id])}}">{{\Illuminate\Support\Str::limit($project->title, 16, '...')}}</a></h3>
                                 <!-- end author -->
                             </div>

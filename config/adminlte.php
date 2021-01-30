@@ -277,6 +277,12 @@ return [
             'icon' => 'fas fa-images',
             'label_color' => 'success',
         ],
+        [
+            'text' => 'Firma haqida ma\'lumot',
+            'url'  => 'admin/data',
+            'icon' => 'fas fa-settings',
+            'label_color' => 'success',
+        ],
         ['header' => ''],
         [
             'text' => 'Xabarlar',

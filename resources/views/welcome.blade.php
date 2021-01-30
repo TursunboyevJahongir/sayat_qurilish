@@ -3,46 +3,10 @@
 @section('content')
     <header class="slider white-space-bottom">
         <div class="container">
-            <div class="swiper-container slider-content">
-                <div class="swiper-wrapper">
-                    <?php
-                    /**
-                     * @var \App\Models\Slideshow[] $slides
-                     */
-                    ?>
-                    @foreach($slides as $slide)
-                        <div class="swiper-slide">
-                            <div class="inner">
-                                <h2>{{\Illuminate\Support\Str::limit($slide->title, 100, '...')}}</h2>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-                <!-- end swiper-wrapper -->
-                <div class="controls">
-                    <div class="swiper-pagination"></div>
-                    <!-- end swiper-pagination -->
-                    <div class="button-prev"><i class="lni lni-arrow-left"></i></div>
-                    <!-- end button-prev -->
-                    <div class="button-next"><i class="lni lni-arrow-right"></i></div>
-                    <!-- end button-next -->
-                </div>
-                <!-- end controls -->
-
+            <div style="text-align: center; margin-top: 25px; z-index: 99999; background: transparent" class="hide-mobile">
+                <img style="height: 80px;" src="{{asset('logo.png')}}" alt="Image"><br/>
+                <h1 class="text-white" style="text-shadow: 4px 4px 2px rgba(150, 150, 150, 0.3);font-weight: bolder">Sayat Qurilish "MChJ"</h1>
             </div>
-            <!-- end slider-content -->
-            <div class="swiper-container slider-main">
-                <div class="swiper-wrapper">
-                    @foreach($slides  as $slide)
-                        <div class="swiper-slide">
-                            <div class="slide-image" data-background="{{$slide->image}}"></div>
-                        </div>
-                    @endforeach
-                </div>
-                <!-- end swiper-wrapper -->
-                <!-- end header-box -->
-            </div>
-            <!-- end slider-main -->
         </div>
         <!-- end container -->
     </header>
@@ -208,7 +172,7 @@
                 ?>
                 @foreach($workers as $worker)
                     <div class="col">
-                        <div class="sales-team">
+                        <div class="sales-team" style="{{$loop->index === 2 ? 'transform: translateY(-50px)' : ''}} {{$loop->index === 0 ? 'transform: translateY(30px)' : ''}}">
                             <figure><img src="{{$worker->image}}" alt="Image"></figure>
                             <div class="infos">
                                 <h6>{{$worker->full_name}}</h6>
@@ -288,5 +252,14 @@
         </div>
         <!-- end container -->
     </section>
+    <div class="content-section" data-background="#f7f6f1" style="background: rgb(247, 246, 241);">
+        <div class="container">
+            <div class="text-center">
+                <figure class="logo-item" style="opacity: 1;"><a href="https://mc.uz/"><img style="width: 414px; height: 72px" src="https://mc.uz/wp-content/uploads/2020/10/logo-text.png" alt="Image"></a> </figure>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
 @endsection
 

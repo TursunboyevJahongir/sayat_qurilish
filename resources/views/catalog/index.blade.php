@@ -28,7 +28,7 @@
                        @foreach($items as $item)
                            <div class="col-lg-6 mb-2">
                                <div class="recent-news">
-                                   <figure> <img class="img-fluid" src="{{$item->image}}" alt="Image"> </figure>
+                                   <figure> <a href="{{route('catalog.view', ['id' => $item->id])}}"> <img class="img-fluid" src="{{$item->image}}" alt="Image"></a> </figure>
                                    <div class="content"> <small>{{$item->created_at->format('d.m.Y')}}</small>
                                        <h3><a href="{{route('catalog.view', ['id' => $item->id])}}">{{\Illuminate\Support\Str::limit($item->title, 16, '...')}}</a></h3>
                                        <!-- end author -->

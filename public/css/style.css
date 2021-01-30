@@ -3,7 +3,7 @@
 
 @Author: Themezinho
 @URL: http://www.themezinho.net
- 
+
 This file contains the styling for the actual theme, this
 is the file you need to edit to change the look of the
 theme.
@@ -24,7 +24,7 @@ theme.
 		11. HAMBURGER
 		12. ACCORDION
 		13. SEARCH BOX
-		14. SIDE WIDGET 
+		14. SIDE WIDGET
 		15. CUSTOM BUTTON
 		16. WHITE SPACES
 		17. PAGE TRANSITION
@@ -67,7 +67,7 @@ theme.
 		54. RESPONSIVE TABLET FIXES
 		55. RESPONSIVE MOBILE FIXES
 
-	
+
 
 */
 /* CUSTOM FONTS */
@@ -532,7 +532,7 @@ a:hover {
   .white-space-bottom:after {
     content: "";
     width: 100%;
-    height: 148px;
+    height: 0;
     background: #fff;
     position: absolute;
     left: 0;
@@ -576,7 +576,7 @@ a:hover {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 4;
+    z-index: 999999;
   transition: top ease 1s; }
   .navbar.sticky {
     background: #0b0b0b; }
@@ -738,17 +738,24 @@ a:hover {
 .slider {
   width: 100%;
   height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
   background-color: #0b0b0b;
-  background-image: url("../images/header-pattern.png");
-  background-size: cover;
+  background-image: url("bg.jpg");
+  background-size: 100% 100%;
+    background-repeat: no-repeat;
   position: relative; }
+.slider::after {
+    content: '\A';
+    width: 100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0.7;
+}
   .slider .container {
     position: relative;
-    padding-top: 150px;
-    display: flex;
-    flex-wrap: wrap; }
+    padding-top: 270px;
+      margin-left: 100px;
+      z-index: 99999;
+  }
   .slider .slider-content {
     width: calc(50% - 120px);
     position: relative;
@@ -915,13 +922,16 @@ a:hover {
   flex-wrap: wrap;
   align-items: center;
   background-color: #0b0b0b;
-  background-image: url("../images/header-pattern.png");
+  background-image: url("bg.jpg");
   background-size: cover;
   position: relative; }
   .page-header .container {
-    position: relative;
+    position: absolute;
+      background-color: rgba(0,0,0,.7);
+      padding: 20px;
+      border-top-right-radius: 40px;
     color: #fff;
-    padding-top: 98px; }
+    bottom: 0; }
     .page-header .container h6 {
       width: 100%;
       display: block;
@@ -930,7 +940,7 @@ a:hover {
     .page-header .container h1 {
       width: 100%;
       display: block;
-      font-size: 7vw;
+      font-size: 26px;
       font-weight: 800;
       line-height: 1; }
     .page-header .container ul {
@@ -1320,7 +1330,6 @@ a:hover {
       .projects li .project-box img {
         width: 100%;
         display: block;
-        filter: grayscale(1);
         -webkit-transition: all .25s ease-in-out;
         -moz-transition: all .25s ease-in-out;
         -ms-transition: all .25s ease-in-out;
@@ -1397,7 +1406,6 @@ a:hover {
       .project-slider .swiper-slide .project-box img {
         width: 100%;
         display: block;
-        filter: grayscale(1);
         -webkit-transition: all .25s ease-in-out;
         -moz-transition: all .25s ease-in-out;
         -ms-transition: all .25s ease-in-out;
@@ -1573,7 +1581,7 @@ a:hover {
     padding-right: 30px; }
     .step-box .image img {
       width: 100%;
-      filter: grayscale(1); }
+      filter: }
   .step-box .content {
     width: 80%;
     position: absolute;
@@ -2027,7 +2035,6 @@ a:hover {
     margin: 0; }
     .sales-team figure img {
       width: 100%;
-      filter: grayscale(1);
       -webkit-transition: all .25s ease-in-out;
       -moz-transition: all .25s ease-in-out;
       -ms-transition: all .25s ease-in-out;
@@ -2157,8 +2164,7 @@ a:hover {
     width: 100%;
     display: block;
     margin: 0;
-    opacity: 0.5;
-    filter: grayscale(1); }
+    opacity: 0.5; }
 
 /* TESTIOMONIALS SLIDER */
 .testimonials-slider {
@@ -2307,8 +2313,7 @@ a:hover {
     .recent-news figure img {
       width: 100%;
       max-width: inherit;
-      min-height: 220px;
-      filter: grayscale(1); }
+      min-height: 220px; }
   .recent-news .content {
     width: 100%;
     height: 100%;
